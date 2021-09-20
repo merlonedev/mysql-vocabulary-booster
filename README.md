@@ -325,8 +325,7 @@ Crie uma query que exiba 03 colunas:
 
     Média salarial entre 5801 - 7500 :arrow_right: Pleno
 
-    Média salarial entre 7501 - 10500 :arrow_right: Sênior
-
+    Média salarial entre 7501 - 10500 :arrow_right:  
     Média salarial acima de 10500 :arrow_right: CEO
 
 Sempre que fizer uso da média salarial, arredonde o valor para 02 casas decimais.
