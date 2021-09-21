@@ -20,4 +20,5 @@ SELECT
             DEPARTMENT_ID = jh.DEPARTMENT_ID) AS Departamento
 FROM
     hr.job_history AS jh
+WHERE EMPLOYEE_ID <> 0
 ORDER BY `Nome completo` DESC , Cargo;
