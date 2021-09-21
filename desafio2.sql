@@ -7,4 +7,5 @@ CASE
     WHEN hrj.MAX_SALARY >  30000 THEN 'Altíssimo'  
 END 'Nível'
 FROM
-    hr.jobs hrj;
+    hr.jobs hrj
+ORDER BY hrj.JOB_TITLE
