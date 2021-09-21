@@ -1,4 +1,3 @@
-
 (SELECT DISTINCT
     Country AS País
 FROM
