@@ -6,4 +6,5 @@ SELECT
         WHEN MAX_SALARY > 10001 THEN 'Médio'
         WHEN MAX_SALARY >= 5000 THEN 'Baixo'
 	END AS Nível
-FROM hr.jobs;
+FROM hr.jobs
+ORDER BY Cargo;
