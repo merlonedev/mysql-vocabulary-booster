@@ -3,7 +3,7 @@ DELIMITER $$
 CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(employee_email VARCHAR(100))
 RETURNS INT READS SQL DATA
 BEGIN
-	DECLARE quant INT;
+DECLARE quant INT;
 SELECT 
     COUNT(jh.EMPLOYEE_ID)
 FROM
