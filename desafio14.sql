@@ -1,5 +1,5 @@
 SELECT 
-    s.Country AS País
+    sub.Country AS País
 FROM
     (SELECT DISTINCT
         country
