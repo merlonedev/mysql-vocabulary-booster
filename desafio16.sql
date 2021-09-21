@@ -8,16 +8,16 @@ RETURNS INT READS SQL DATA
 BEGIN
 	DECLARE total_de_empregos INT;
 	SELECT 
-		COUNT(*)
-	FROM
-		hr.job_history AS jh
-	WHERE
-		jh.EMPLOYEE_ID IN (SELECT 
-				e.EMPLOYEE_ID
-			FROM
-				hr.employees AS e
-			WHERE
-				e.EMAIL = email_do_funcionario) INTO total_de_empregos;
+    COUNT(*)
+FROM
+    hr.job_history AS jh
+WHERE
+    jh.EMPLOYEE_ID IN (SELECT 
+            e.EMPLOYEE_ID
+        FROM
+            hr.employees AS e
+        WHERE
+            e.EMAIL = email_do_funcionario) INTO total_de_empregos;
 	RETURN total_de_empregos;
 END $$
 

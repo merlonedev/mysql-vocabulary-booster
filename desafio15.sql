@@ -17,7 +17,7 @@ WHERE
             hr.jobs AS j
         WHERE
             j.JOB_TITLE = nome_do_cargo);
-	
+
 END $$
 
 DELIMITER ;
