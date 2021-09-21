@@ -1,22 +1,33 @@
-SELECT 
-    `Nome completo`,
-    `Cargo`,
-    `Data de início do cargo`,
-    `Departamento`
+SELECT
+  (
+    SELECT
+      CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME)
+    FROM
+      hr.employees AS E
+    WHERE
+      E.EMPLOYEE_ID = JH.EMPLOYEE_ID
+  ) AS `Nome completo`,
+  (
+    SELECT
+      J.JOB_TITLE
+    FROM
+      hr.jobs AS J
+    WHERE
+      J.JOB_ID = JH.JOB_ID
+  ) AS `Cargo`,
+  JH.START_DATE AS `Data de início do cargo`,
+  (
+    SELECT
+      D.DEPARTMENT_NAME 
+    FROM
+      hr.departments AS D
+    WHERE
+      D.DEPARTMENT_ID = JH.DEPARTMENT_ID
+  ) AS `Departamento`
 FROM
-    (SELECT 
-        E.EMPLOYEE_ID AS `FID`,
-            CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME) AS `Nome completo`,
-            J.JOB_TITLE AS `Cargo`
-    FROM
-        hr.employees AS E
-    JOIN hr.jobs AS J ON E.JOB_ID = J.JOB_ID) AS F
-        JOIN
-    (SELECT 
-        E.EMPLOYEE_ID AS `SID`,
-            JH.START_DATE AS `Data de início do cargo`,
-            JH.DEPARTMENT_ID AS `Departamento`
-    FROM
-        hr.job_history AS JH
-    JOIN hr.employees AS E ON JH.EMPLOYEE_ID = E.EMPLOYEE_ID) AS S ON `FID` = `SID`
-ORDER BY `Nome completo` DESC , Cargo;
+  hr.job_history AS JH
+WHERE
+  CHAR_LENGTH(JH.JOB_ID) > 0
+ORDER BY
+  `Nome completo` DESC,
+  `Cargo`;
