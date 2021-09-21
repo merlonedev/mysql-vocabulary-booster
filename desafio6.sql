@@ -4,8 +4,8 @@ SELECT
     hist.START_DATE AS `Data de início do cargo`,
     dep.DEPARTMENT_NAME AS `Departamento`
 FROM
-    hr.employees AS emp
-INNER JOIN hr.jobs AS job ON job.JOB_ID = emp.JOB_ID
-INNER JOIN hr.job_history AS hist ON hist.EMPLOYEE_ID = emp.EMPLOYEE_ID
-INNER JOIN hr.departments AS dep ON dep.DEPARTMENT_ID = emp.DEPARTMENT_ID
+    hr.job_history AS hist
+INNER JOIN hr.jobs AS job ON job.JOB_ID = hist.JOB_ID
+INNER JOIN hr.departments AS dep ON dep.DEPARTMENT_ID = hist.DEPARTMENT_ID
+INNER JOIN hr.employees AS emp ON emp.EMPLOYEE_ID = hist.EMPLOYEE_ID
 ORDER BY `Nome completo` DESC, `Cargo`;
