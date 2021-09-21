@@ -12,4 +12,3 @@ WHERE
     t1.JOB_ID = t2.JOB_ID
         AND t1.EMPLOYEE_ID <> t2.EMPLOYEE_ID
 ORDER BY `Nome completo funcionário 1`, `Nome completo funcionário 2`;
-    

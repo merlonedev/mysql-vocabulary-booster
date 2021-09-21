@@ -6,15 +6,14 @@ RETURNS INT READS SQL DATA
 BEGIN
 	DECLARE job_total INT;
 	SELECT 
-		COUNT(*) INTO job_total
-	FROM
-		employees AS e
-			INNER JOIN
-		job_history AS jh ON jh.EMPLOYEE_ID = e.EMPLOYEE_ID
-	WHERE
-		EMAIL = employee_email ;
+    COUNT(*)
+INTO job_total FROM
+    employees AS e
+        INNER JOIN
+    job_history AS jh ON jh.EMPLOYEE_ID = e.EMPLOYEE_ID
+WHERE
+    EMAIL = employee_email;
     RETURN job_total;
 END $$
 
 DELIMITER ;
-	
