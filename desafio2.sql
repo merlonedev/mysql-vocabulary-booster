@@ -1,11 +1,11 @@
 SELECT 
-    JOB_ID AS 'Cargo',
+    JOB_TITLE AS 'Cargo',
     CASE
-        WHEN SALARY >= 5000 AND SALARY <= 10000 THEN 'Baixo'
-        WHEN SALARY >= 10001 AND SALARY <= 20000 THEN 'Médio'
-        WHEN SALARY >= 20001 AND SALARY <= 30000 THEN 'Alto'
-        WHEN SALARY >= 30001 THEN 'Altíssimo'
+        WHEN MAX_SALARY >= 5000 AND MAX_SALARY <= 10000 THEN 'Baixo'
+        WHEN MAX_SALARY >= 10001 AND MAX_SALARY <= 20000 THEN 'Médio'
+        WHEN MAX_SALARY >= 20001 AND MAX_SALARY <= 30000 THEN 'Alto'
+        WHEN MAX_SALARY >= 30001 THEN 'Altíssimo'
     END AS 'Nível'
 FROM
-    hr.employees
-ORDER BY JOB_ID;
+    hr.jobs
+ORDER BY JOB_TITLE;
