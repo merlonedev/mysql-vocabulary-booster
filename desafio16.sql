@@ -5,13 +5,14 @@ RETURNS INT
 READS SQL DATA 
 BEGIN
 RETURN (
-  SELECT 
-  COUNT(jh.EMPLOYEE_ID) 
-	FROM
-	  employees AS emp
-	JOIN
-	  job_history AS jh ON emp.EMPLOYEE_ID = jh.EMPLOYEE_ID
-	WHERE emp.EMAIL = val
+SELECT 
+    COUNT(jh.EMPLOYEE_ID)
+FROM
+    employees AS emp
+        JOIN
+    job_history AS jh ON emp.EMPLOYEE_ID = jh.EMPLOYEE_ID
+WHERE
+    emp.EMAIL = val
     );
 END
 $$
