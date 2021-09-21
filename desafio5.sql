@@ -4,5 +4,5 @@ JOB_TITLE AS Cargo,
 ROUND(AVG(MIN_SALARY)/12, 2) AS 'Média mínima mensal',
 ROUND(AVG(MAX_SALARY)/12, 2) AS 'Média máxima mensal'
 FROM jobs
-GROUP BY Cargo
+GROUP BY Cargo, MAX_SALARY, MIN_SALARY
 ORDER BY (MAX_SALARY - MIN_SALARY), Cargo;
