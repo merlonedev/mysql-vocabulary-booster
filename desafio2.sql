@@ -6,5 +6,5 @@ SELECT JOB_TITLE AS Cargo, CASE
   ELSE 'Error'
     END AS Nível
  FROM hr.jobs
- ORDER BY Cargo
-;
+ ORDER BY Cargo;
+
