@@ -1,4 +1,4 @@
-SELECT
+SELECT 
     c.ContactName AS 'Nome de contato',
     s.ShipperName AS 'Empresa que fez o envio',
     o.OrderDate AS 'Data do pedido'
@@ -9,6 +9,5 @@ FROM
         INNER JOIN
     w3schools.shippers AS s ON s.ShipperID = o.ShipperID
 WHERE
-    s.ShipperName LIKE 'Speedy Express'
-        OR 'United Shipping'
+    s.ShipperName IN ('Speedy Express','United Package')
 ORDER BY c.ContactName ASC , s.ShipperName ASC , o.OrderDate ASC;
