@@ -1,6 +1,6 @@
 -- select * from hr.countries;
 
-SELECT C.COUNTRY_NAME AS `Pais`,
+SELECT C.COUNTRY_NAME AS `País`,
 IF(r.REGION_NAME = "Europe", "incluido", "não incluido") AS `Status Inclusão`
 FROM 
 hr.countries AS C
