@@ -4,7 +4,7 @@ SELECT
         FROM
             hr.employees
         WHERE
-            EMPLOYEE_ID = jh.EMPLOYEE_ID) AS `Nome Completo`,
+            EMPLOYEE_ID = jh.EMPLOYEE_ID) AS `Nome completo`,
     (SELECT 
             JOB_TITLE
         FROM
@@ -20,4 +20,4 @@ SELECT
             DEPARTMENT_ID = jh.DEPARTMENT_ID)
 FROM
     hr.job_history AS jh
-ORDER BY `Nome Completo` DESC , Cargo;
+ORDER BY `Nome completo` DESC , Cargo;
