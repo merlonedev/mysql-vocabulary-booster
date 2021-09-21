@@ -1,10 +1,10 @@
 USE hr;
 DELIMITER $$
 
-CREATE PROCEDURE average_salary_per_job(IN job VARCHAR(20))
+CREATE PROCEDURE buscar_media_por_cargo(IN job VARCHAR(20))
 BEGIN
-SELECT AVG(SALARY) FROM employees AS e
-INNER JOIN jobs AS j
+SELECT AVG(SALARY) FROM hr.employees AS e
+INNER JOIN hr.jobs AS j
 ON j.JOB_ID = e.JOB_ID
 WHERE j.JOB_TITLE = job;
 END $$
