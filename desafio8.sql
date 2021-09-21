@@ -9,4 +9,5 @@ FROM
         JOIN
     shippers AS s ON o.ShipperID = s.ShipperID
 WHERE
-    s.ShipperID = 1 OR s.ShipperID = 2;
+    s.ShipperID = 1 OR s.ShipperID = 2
+ORDER BY c.ContactName , s.ShipperName , o.OrderDate;
