@@ -6,4 +6,3 @@ FROM
         INNER JOIN
     hr.regions AS r ON r.REGION_ID = c.REGION_ID
 ORDER BY c.COUNTRY_NAME;
-    
