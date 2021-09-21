@@ -1,8 +1,3 @@
-SELECT * FROM hr.job_history;
-SELECT * FROM hr.employees;
-SELECT * FROM hr.jobs;
-SELECT * FROM hr.departments;
-
 SELECT 
     (SELECT 
             CONCAT(FIRST_NAME, ' ', LAST_NAME)
