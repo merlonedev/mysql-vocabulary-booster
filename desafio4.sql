@@ -1,5 +1,5 @@
 SELECT 
-    e.JOB_ID AS 'Cargo',
+    h.JOB_TITLE AS 'Cargo',
     TRUNCATE(AVG(e.SALARY), 2) AS 'Média salarial',
     CASE
         WHEN AVG(e.SALARY) BETWEEN 2000 AND 5800 THEN 'Júnior'
