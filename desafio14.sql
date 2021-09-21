@@ -1,6 +1,13 @@
-SELECT s.Country AS País
-FROM suppliers s
-JOIN customers c ON c.Country = s.Country
-GROUP BY s.Country
-ORDER BY s.Country
-LIMIT 5;
+SELECT 
+    s.Country AS País
+FROM
+    (SELECT DISTINCT
+        country
+    FROM
+        customers UNION ALL SELECT DISTINCT
+        country
+    FROM
+        suppliers
+    ORDER BY COUNTRY
+    LIMIT 5) sub;
+
