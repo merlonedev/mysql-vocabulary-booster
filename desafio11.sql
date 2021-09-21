@@ -14,5 +14,5 @@ WHERE (SELECT
         FROM
             w3schools.customers
         GROUP BY Country
-        HAVING Country = cust1.Country) > 0
+        HAVING Country = cust1.Country) - 1 > 0
 ORDER BY `Nome`;
