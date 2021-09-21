@@ -1,0 +1,10 @@
+USE hr;
+DELIMITER $$
+
+CREATE PROCEDURE buscar_media_por_cargo(IN jobName VARCHAR(100))
+BEGIN
+	DECLARE jobID VARCHAR(10);
+    SELECT JOB_ID FROM `jobs` WHERE LCASE(JOB_TITLE) LIKE LCASE(jobName) INTO jobID;
+    SELECT ROUND(AVG(SALARY), 2) AS `Média salarial` FROM `employees` WHERE JOB_ID = jobID;
+END $$
+DELIMITER ;
