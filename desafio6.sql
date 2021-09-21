@@ -6,8 +6,9 @@ SELECT
 FROM
     hr.employees AS e
         INNER JOIN
-    hr.jobs AS j ON e.JOB_ID = j.JOB_ID
+    hr.job_history AS jh ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID
+        INNER JOIN
+    hr.jobs AS j ON jh.JOB_ID = j.JOB_ID
         INNER JOIN
     hr.departments AS d ON e.DEPARTMENT_ID = d.DEPARTMENT_ID
-    inner join hr.job_history as jh on e.EMPLOYEE_ID = jh.EMPLOYEE_ID
 ORDER BY `Nome completo` DESC , Cargo;
