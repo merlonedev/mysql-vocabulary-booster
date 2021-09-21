@@ -6,16 +6,16 @@ RETURNS INT READS SQL DATA
 BEGIN
 DECLARE job_count INT;
 SELECT 
-	COUNT(j.job_id)
+COUNT(j.job_id)
 FROM
-	hr.job_history AS j
+hr.job_history AS j
 WHERE
-	j.employee_id = (SELECT 
-			e.employee_id
-		FROM
-			hr.employees AS e
-		WHERE
-			e.email = email) INTO job_count;
+j.employee_id = (SELECT 
+e.employee_id
+FROM
+hr.employees AS e
+WHERE
+e.email = email) INTO job_count;
 RETURN job_count;
 END $$
 

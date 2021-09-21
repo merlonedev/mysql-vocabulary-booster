@@ -6,12 +6,12 @@ RETURNS INT READS SQL DATA
 BEGIN
 DECLARE numberOfEmployeesHired INT;
 SELECT 
-	COUNT(*)
+COUNT(*)
 FROM
-	hr.employees
+hr.employees
 WHERE
-	MONTH(hire_date) = 6
-		AND YEAR(hire_date) = 1987 INTO numberOfEmployeesHired;
+MONTH(hire_date) = 6
+AND YEAR(hire_date) = 1987 INTO numberOfEmployeesHired;
 RETURN numberOfEmployeesHired;
 END $$
 
