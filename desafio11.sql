@@ -1,5 +1,5 @@
 SELECT 
-    c.ContactName AS 'Nome de contato',
+    c.ContactName AS Nome,
     c.Country AS País,
     (SELECT 
             COUNT(*) - 1
@@ -16,4 +16,4 @@ WHERE
             w3schools.customers
         WHERE
             Country = c.Country) > 0
-ORDER BY `Nome de contato`;
+ORDER BY Nome;
