@@ -1,3 +1,4 @@
-SELECT country_name AS Pais,
-	IF (region_id = 1, 'incluido', 'não incluido') AS 'Status Inclusão'
-    FROM hr.countries ORDER BY Pais;
+SELECT COUNTRY_NAME AS País,
+IF (REGION_ID = 1, 'incluído', 'não incluído') AS 'Status Inclusão'
+FROM hr.countries
+ORDER BY COUNTRY_NAME;
