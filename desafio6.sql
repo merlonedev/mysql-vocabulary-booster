@@ -5,10 +5,10 @@ SELECT
     d.department_name as Departamento
 FROM
     employees AS e
-        JOIN
+JOIN
     job_history AS jh ON e.employee_id = jh.employee_id
-		JOIN
+JOIN
     jobs AS j ON jh.job_id = j.job_id
-        JOIN
+JOIN
     departments AS d ON jh.department_id = d.department_id
 ORDER BY `Nome Completo` DESC, Cargo;
