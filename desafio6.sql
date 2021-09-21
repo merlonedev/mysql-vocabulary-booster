@@ -6,4 +6,3 @@
 --   *A quarta deve possuir o alias "Departamento" e mostrar o nome do departamento em que a pessoa exerceu seu cargo.
 -- Os resultados devem estar ordenados pelo nome completo das pessoas empregadas em ordem decrescente.Em caso de empate no nome completo,
 -- ordene os resultados pelo nome do cargo em ordem alfabética.
-

@@ -12,3 +12,4 @@
 -- Em caso de empate na média, os resultados devem ser ordenados pelo nome do cargo em ordem alfabética.
 -- select * from hr.employees;
 -- select * from hr.jobs;
+
