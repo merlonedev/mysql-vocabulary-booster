@@ -8,7 +8,15 @@
 --   -Média salarial entre 7501 - 10500 = Sênior
 --   -Média salarial acima de 10500 = CEO
 -- Sempre que fizer uso da média salarial, arredonde o valor para 02 casas decimais.
--- Os resultados devem estar ordenados pela média salarial em ordem crescente.
--- Em caso de empate na média, os resultados devem ser ordenados pelo nome do cargo em ordem alfabética.
--- select * from hr.employees;
--- select * from hr.jobs;
+-- Os resultados devem estar ordenados pela média salarial em ordem crescente. Em caso de empate na média, os resultados devem ser ordenados pelo nome do cargo em ordem alfabética.
+SELECT j.JOB_TITLE AS `Cargo`, ROUND(AVG(e.salary), 2) AS `Média salarial`,
+CASE
+        WHEN ROUND(AVG(e.salary), 2) BETWEEN 2000 AND 5800  THEN 'Júnior'
+        WHEN ROUND(AVG(e.salary), 2) BETWEEN 5801 AND 7500  THEN 'Pleno'
+        WHEN ROUND(AVG(e.salary), 2) BETWEEN 7501 AND 10500 THEN 'Sênior'
+        WHEN ROUND(AVG(e.salary), 2) > 10500 THEN 'CEO'
+    END AS `Senioridade`
+FROM hr.jobs AS j
+INNER JOIN hr.employees AS e ON j.JOB_ID = e.JOB_ID
+GROUP BY `Cargo`
+ORDER BY `Média salarial` ASC, `Cargo` ASC;
