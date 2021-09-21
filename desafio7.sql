@@ -5,8 +5,9 @@
 -- *A terceira deve possuir o alias "Salário" e exibir o salário da pessoa.
 -- Os resultados devem estar ordenados pelo nome completo das pessoas empregadas em ordem alfabética. Em caso de empate no nome completo, 
 -- ordene os resultados pela data de início que a pessoa iniciou seu cargo, em ordem crescente.
-SELECT UCASE(CONCAT(FIRST_NAME, ' ', LAST_NAME))  AS `Nome completo`, HIRE_DATE AS `Data de início`,
-SALARY AS `Salário`
-FROM hr.employees
-WHERE MONTH(HIRE_DATE) IN (1, 2, 3)
+SELECT UCASE(CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME))  AS `Nome completo`, jh.START_DATE AS `Data de início`,
+e.SALARY AS `Salário`
+FROM hr.employees AS e
+INNER JOIN hr.job_history AS jh ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID
+WHERE MONTH(jh.START_DATE) IN (1, 2, 3)
 ORDER BY `Nome completo` ASC, `Data de início` ASC;
