@@ -4,8 +4,8 @@ DROP FUNCTION IF EXISTS buscar_quantidade_de_empregos_por_funcionario;
 CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(employee_email VARCHAR(50))
 RETURNS INT READS SQL DATA
 BEGIN
-	DECLARE job_total INT;
-	SELECT 
+DECLARE job_total INT;
+SELECT 
     COUNT(*)
 INTO job_total FROM
     employees AS e
