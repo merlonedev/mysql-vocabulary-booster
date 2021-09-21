@@ -1,15 +1,3 @@
-use w3schools;
-select * from orders;
-select * from order_details;
-select * from customers;
-select * from employees;
-select * from suppliers;
-select * from shippers;
-select * from products;
-
-select * from w3schools.customers;
-select count(*) from w3schools.employees;
-
 SELECT 
     ProductName AS 'Produto',
     MIN(Quantity) AS 'Mínima',
