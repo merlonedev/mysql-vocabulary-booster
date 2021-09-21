@@ -1,4 +1,4 @@
-SELECT 
+SELECT
     j.JOB_TITLE AS 'Cargo',
     ROUND(AVG(e.SALARY), 2) AS 'Média salarial',
     CASE
