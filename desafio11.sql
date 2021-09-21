@@ -6,7 +6,6 @@ FROM
     customers A,
     customers B
 WHERE
-    A.Country = B.Country
-        AND A.CustomerID <> B.CustomerID
-GROUP BY A.ContactName
+    A.Country = B.Country AND A.CustomerID <> B.CustomerID
+GROUP BY A.ContactName, A.Country
 ORDER BY A.ContactName ASC;
