@@ -1,8 +1,8 @@
 SELECT 
-    h.JOB_TITLE AS Cargo,
-    h.MAX_SALARY - h.MIN_SALARY AS `Variação Salarial`,
-    TRUNCATE(MIN(e.SALARY / 12), 2) AS `Média mínima mensal`,
-    TRUNCATE(MAX(e.SALARY / 12), 2) AS `Média máxima mensal`
+    e.JOB_ID AS Cargo,
+    h.MAX_SALARY - h.MIN_SALARY AS 'Variação Salarial',
+    TRUNCATE(MIN(e.SALARY / 12), 2) AS 'Média mínima mensal',
+    TRUNCATE(MAX(e.SALARY / 12), 2) AS 'Média máxima mensal'
 FROM
     hr.employees AS e
         INNER JOIN
