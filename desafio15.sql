@@ -8,4 +8,6 @@ FROM employees AS e
 JOIN jobs AS j
 ON e.JOB_ID = j.JOB_ID
 WHERE JOB_TITLE = cargo;
-END
+END $$
+
+DELIMITER ;

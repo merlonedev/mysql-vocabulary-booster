@@ -10,5 +10,5 @@ SELECT
                 AND c2.CustomerID <> c1.CustomerID) AS 'Número de compatriotas'
 FROM
     w3schools.customers AS c1
-HAVING Número de compatriotas > 0
+HAVING `Número de compatriotas` > 0
 ORDER BY c1.ContactName
