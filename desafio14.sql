@@ -1,12 +1,12 @@
 SELECT DISTINCT
-    *
+    Country as 'País'
 FROM
     ((SELECT 
-        Country
+        Country 
     FROM
         w3schools.customers) UNION (SELECT 
         Country
     FROM
         w3schools.suppliers)) AS total_countries
-ORDER BY Country
+ORDER BY País
 LIMIT 5;
