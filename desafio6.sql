@@ -11,4 +11,4 @@ FROM
     hr.jobs AS JB ON JB.JOB_ID = JBH.JOB_ID
 		INNER JOIN
     hr.departments AS DT ON DT.DEPARTMENT_ID = JBH.DEPARTMENT_ID
-ORDER BY `Nome completo` DESC , `Cargo`;
+ORDER BY `Nome completo` DESC, `Cargo`;
