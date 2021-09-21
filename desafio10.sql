@@ -8,5 +8,5 @@ FROM
         JOIN
     w3schools.order_details od ON od.ProductID = pr.ProductID
 GROUP BY pr.ProductName
-HAVING ROUND(AVG(od.Quantity)) > 20
-ORDER BY ROUND(AVG(od.Quantity), 2) , pr.ProductName;
+HAVING Média > 20
+ORDER BY Média , Produto;
