@@ -1,6 +1,3 @@
-SELECT *  FROM hr.countries;
-SELECT * FROM hr.regions;
-
 SELECT 
     c.country_name AS 'País',
     CASE
