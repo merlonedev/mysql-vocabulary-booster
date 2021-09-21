@@ -9,4 +9,4 @@ LEFT JOIN hr.employees E
 ON JH.EMPLOYEE_ID = E.EMPLOYEE_ID
 LEFT JOIN hr.departments D
 ON D.DEPARTMENT_ID = JH.DEPARTMENT_ID
-ORDER BY `Nome completo` DESC, `Cargo`;
+ORDER BY `Nome completo` DESC, `Cargo` LIMIT 10;
