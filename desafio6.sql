@@ -6,11 +6,9 @@ SELECT
 FROM
     hr.employees AS e
         INNER JOIN
-    hr.jobs AS h
+    hr.job_history AS j ON e.EMPLOYEE_ID = j.EMPLOYEE_ID
         INNER JOIN
-    hr.job_history AS j
+    hr.jobs AS h ON j.JOB_ID = h.JOB_ID
         INNER JOIN
-    hr.departments AS d ON e.JOB_ID = h.JOB_ID
-        AND e.DEPARTMENT_ID = d.DEPARTMENT_ID
-        AND e.EMPLOYEE_ID = j.EMPLOYEE_ID
-ORDER BY CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) DESC , h.JOB_TITLE ASC
+    hr.departments AS d ON d.DEPARTMENT_ID = j.DEPARTMENT_ID
+ORDER BY CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) DESC , h.JOB_TITLE ASC;
