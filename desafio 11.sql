@@ -12,4 +12,4 @@ GROUP BY
 HAVING
   `Número de compatriotas` <> 0 
 ORDER BY
-   `Nome`;
+    `Nome`;
