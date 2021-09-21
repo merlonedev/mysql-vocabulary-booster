@@ -7,4 +7,3 @@ FROM
     w3schools.employees AS e ON e.employeeid = o.employeeid
 GROUP BY `Nome completo`
 ORDER BY `Total de pedidos`;
-
