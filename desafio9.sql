@@ -1,6 +1,6 @@
 SELECT 
     CONCAT(e.FirstName, ' ', e.LastName) AS 'Nome completo',
-    COUNT(o.EmployeeID)
+    COUNT(o.EmployeeID) AS 'Total de pedidos'
 FROM
     w3schools.employees AS e
         JOIN
