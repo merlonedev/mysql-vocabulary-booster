@@ -7,4 +7,3 @@ SELECT
 FROM
     countries
 ORDER BY COUNTRY_NAME;
-	
