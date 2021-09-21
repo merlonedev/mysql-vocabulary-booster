@@ -9,6 +9,6 @@ FROM
     jobs AS j ON e.JOB_ID = j.JOB_ID
         INNER JOIN
     departments AS d ON d.DEPARTMENT_ID = e.DEPARTMENT_ID
-		    INNER JOIN
-	  job_history AS jh ON jh.EMPLOYEE_ID = e.EMPLOYEE_ID
-ORDER BY `Nome Completo` DESC, `Cargo`;
+        INNER JOIN
+    job_history AS jh ON jh.EMPLOYEE_ID = e.EMPLOYEE_ID
+ORDER BY 'Nome Completo' DESC , 'Cargo';
