@@ -8,4 +8,3 @@ ON prod.ProductID = qnt.ProductID
 GROUP BY `Produto`
 HAVING AVG(qnt.Quantity) > 20
 ORDER BY `Média`, `Produto`;
-

@@ -9,4 +9,3 @@ ON jobH.JOB_ID = jobs.JOB_ID
 INNER JOIN hr.departments AS dep
 ON jobH.DEPARTMENT_ID = dep.DEPARTMENT_ID
 ORDER BY `Nome completo` DESC, `Cargo`;
-
