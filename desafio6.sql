@@ -11,6 +11,6 @@ hr.job_history AS j_history
 hr.jobs AS jobs ON jobs.JOB_ID = j_history.JOB_ID
         JOIN
 hr.employees AS employees ON employees.EMPLOYEE_ID = j_history.EMPLOYEE_ID
-	JOIN
+JOIN
 hr.departments AS departments ON departments.DEPARTMENT_ID = j_history.DEPARTMENT_ID
 ORDER BY `Nome completo` DESC, Cargo;
