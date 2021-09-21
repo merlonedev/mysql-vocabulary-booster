@@ -1,6 +1,6 @@
 DELIMITER $$
 
-CREATE TRIGGER InsertNewOrderDate
+CREATE TRIGGER orders_auto_date
 BEFORE INSERT ON orders
 FOR EACH ROW
 BEGIN
