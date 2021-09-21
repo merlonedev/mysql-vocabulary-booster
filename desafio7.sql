@@ -7,5 +7,5 @@ FROM
       JOIN
     hr.job_history AS jh ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID
     WHERE
-	month(start_date) = 1 || month(start_date) = 2 || month(start_date) = 3
+month(start_date) = 1 || month(start_date) = 2 || month(start_date) = 3
 ORDER BY `Nome completo`, `Data de início`;
