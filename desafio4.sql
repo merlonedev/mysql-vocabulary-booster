@@ -8,6 +8,8 @@ SELECT
         ELSE 'CEO'
     END AS 'Senioridade'
 FROM
-    jobs
-GROUP BY JOB_TITLE
-ORDER BY AVG(MAX_SALARY - MIN_SALARY) , JOB_TITLE;
+    jobs as j
+INNER JOIN employees AS e
+ON e.JOB_ID = j.JOB_ID
+GROUP BY Cargo
+ORDER BY AVG(MAX_SALARY - MIN_SALARY) ASC , Cargo ASC;
