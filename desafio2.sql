@@ -4,7 +4,7 @@ CASE
   WHEN max_salary BETWEEN 10001 AND 20000 THEN 'Médio'
   WHEN max_salary BETWEEN 20001 AND 30000 THEN 'Alto'
   WHEN max_salary > 3000 THEN 'Altíssimo'
-END AS Nivel
+END AS `Nível`
 FROM
   hr.jobs
 ORDER BY `Cargo`;
