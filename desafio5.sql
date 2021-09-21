@@ -4,4 +4,4 @@ select
     ROUND(MIN_SALARY / 12, 2)'Média mínima mensal',
     ROUND(MAX_SALARY / 12, 2)'Média máxima mensal'
 from jobs
-order by `Variação Salarial`, Cargo;
+order by `Variação Salarial`, `Cargo`;
