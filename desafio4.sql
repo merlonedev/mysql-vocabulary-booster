@@ -17,4 +17,3 @@ END
 ) AS Senioridade
 FROM hr.jobs AS j
 ORDER BY `Média salarial`, Cargo;
-
