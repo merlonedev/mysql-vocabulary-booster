@@ -6,9 +6,9 @@ FROM
   w3schools.customers AS coutr1,
   w3schools.customers AS coutr2 
 WHERE
-  coutr1.Country = coutr2.Country 
+  coutr1.Country = coutr2.Country AND coutr1.CustomerID <> coutr2.CustomerID
 GROUP BY
-  `Nome` 
+  `Nome`, coutr1.Country 
 HAVING
   `Número de compatriotas` <> 0 
 ORDER BY
