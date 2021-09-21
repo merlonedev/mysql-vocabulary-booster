@@ -5,6 +5,5 @@ SELECT JOB_TITLE AS Cargo, CASE
   WHEN MAX_SALARY > 30000 THEN 'Altíssimo'
   ELSE 'Error'
     END AS Nível
- FROM hr.jobs
- ORDER BY Cargo;
-
+  FROM hr.jobs
+  ORDER BY Cargo;

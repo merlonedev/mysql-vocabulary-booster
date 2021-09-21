@@ -6,4 +6,3 @@ WHERE C1.Country = C.Country
 GROUP BY Nome, País
 HAVING `Número de compatriotas` > 0
 ORDER BY Nome;
-

@@ -8,4 +8,3 @@ ON P.ProductID = OD.ProductID
 GROUP BY P.ProductID
 HAVING Média > 20
 ORDER BY Média, Produto;
-

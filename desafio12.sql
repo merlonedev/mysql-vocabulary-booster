@@ -8,4 +8,3 @@ F2.PHONE_NUMBER AS 'Telefone funcionário 2'
 FROM hr.employees AS F1, hr.employees AS F2
 WHERE F1.JOB_ID = F2.JOB_ID AND CONCAT(F1.FIRST_NAME,' ',F1.LAST_NAME) <> CONCAT(F2.FIRST_NAME,' ',F2.LAST_NAME)
 ORDER BY `Nome completo funcionário 1`, `Nome completo funcionário 2`;
-
