@@ -1,4 +1,3 @@
-SELECT * FROM hr.jobs;
 SELECT 
     JOB_TITLE AS 'Cargo',
     CASE

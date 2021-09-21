@@ -23,13 +23,13 @@ describe('Desafios iniciais', () => {
     sequelize = new Sequelize('w3schools', process.env.MYSQL_USER, process.env.MYSQL_PASSWORD, {host:process.env.HOSTNAME, dialect: 'mysql'});
   });
 
-  afterAll(async () => {
-    await sequelize.query('DROP DATABASE w3schools;', { type: 'RAW' });
+  // afterAll(async () => {
+  //   await sequelize.query('DROP DATABASE w3schools;', { type: 'RAW' });
 
-    sequelize.close();
-  });
+  //   sequelize.close();
+  // });
 
-  describe('8 - Exibe todas as **pessoas consumidoras** cujos pedidos já foram enviados pelas empresas `Speedy Express` ou `United Package`', () => {
+  describe.only('8 - Exibe todas as **pessoas consumidoras** cujos pedidos já foram enviados pelas empresas `Speedy Express` ou `United Package`', () => {
     it('Verifica o desafio 8', async () => {
       const challengeQuery = readFileSync('desafio8.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult8');
