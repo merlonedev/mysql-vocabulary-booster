@@ -6,10 +6,10 @@ RETURNS INT READS SQL DATA
 BEGIN
 DECLARE jobCount INT;
 SELECT
-	count(jh.job_id) 
+count(jh.job_id) 
   FROM hr.job_history AS jh
     WHERE
-		  jh.employee_id = (
+		jh.employee_id = (
     SELECT
       e.employee_id
     FROM
