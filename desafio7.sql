@@ -1,7 +1,7 @@
 SELECT
-    ucase(CONCAT(employees.FIRST_NAME,
+    CONCAT(ucase(employees.FIRST_NAME),
             ' ',
-            employees.LAST_NAME)) AS `Nome completo`,
+            ucase(employees.LAST_NAME)) AS `Nome completo`,
     j_history.START_DATE AS `Data de início`,
     employees.SALARY AS Salário
 FROM
