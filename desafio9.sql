@@ -1,5 +1,5 @@
 SELECT 
-    CONCAT(e.FirstName, ' ', e.LastName) AS 'Nome completo',
+    distinct CONCAT(e.FirstName, ' ', e.LastName) AS 'Nome completo',
     (SELECT 
             COUNT(*)
         FROM
@@ -10,5 +10,4 @@ FROM
     w3schools.employees AS e
         INNER JOIN
     w3schools.orders AS o ON e.EmployeeID = o.EmployeeID
-GROUP BY `Nome completo`
 ORDER BY `Total de pedidos`;
