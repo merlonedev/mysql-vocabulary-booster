@@ -1,10 +1,10 @@
 SELECT 
-    Country AS 'País'
+    w3schools.customers.Country AS 'País'
 FROM
-    customers 
+    w3schools.customers 
 UNION SELECT 
-    Country AS 'País'
+    w3schools.suppliers.Country AS 'País'
 FROM
-    suppliers
+    w3schools.suppliers
 ORDER BY País
 LIMIT 5;

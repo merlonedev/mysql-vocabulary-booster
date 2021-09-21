@@ -8,6 +8,6 @@ SELECT
         WHERE
             c.Country = cc.Country) AS 'Número de compatriotas'
 FROM
-    customers AS c
+    w3schools.customers AS c
 HAVING `Número de compatriotas` > 0
 ORDER BY c.ContactName;
