@@ -2,7 +2,7 @@ SELECT
     LOWER(CONCAT(employees.FIRST_NAME,
             ' ',
             employees.LAST_NAME)) AS `Nome Completo`,
-    job_history.START_DATE AS `Data de início do cargo`,
+    job_history.START_DATE AS `Data de início`,
     employees.SALARY AS `Salário`
 FROM
     job_history AS job_history
