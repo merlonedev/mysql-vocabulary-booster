@@ -7,4 +7,4 @@ FROM hr.job_history
 INNER JOIN employees ON employees.EMPLOYEE_ID = job_history.EMPLOYEE_ID
 INNER JOIN jobs ON jobs.JOB_ID = job_history.JOB_ID
 INNER JOIN departments ON departments.DEPARTMENT_ID = job_history.DEPARTMENT_ID
-ORDER BY `Nome Completo` DESC, `Cargo` ASC;
+ORDER BY `Nome completo` DESC, `Cargo` ASC;
