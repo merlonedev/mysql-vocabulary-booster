@@ -21,4 +21,4 @@ SELECT
     END AS Senioridade
 FROM
     hr.jobs
-ORDER BY Cargo;
+ORDER BY `Média salarial`, Cargo;
