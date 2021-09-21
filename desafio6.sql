@@ -9,6 +9,6 @@ FROM
     hr.employees e ON j.JOB_ID = e.JOB_ID
         INNER JOIN
     hr.departments d ON e.DEPARTMENT_ID = d.DEPARTMENT_ID
-		INNER JOIN
-	hr.job_history jh ON j.JOB_ID = jh.JOB_ID
+        INNER JOIN
+    hr.job_history jh ON j.JOB_ID = jh.JOB_ID
 ORDER BY `Nome completo` DESC , j.JOB_TITLE;
