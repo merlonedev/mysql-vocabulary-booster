@@ -8,4 +8,4 @@ FROM
         INNER JOIN
     hr.jobs AS Cargo ON employee.JOB_ID = Cargo.JOB_ID
 GROUP BY employee.JOB_ID
-ORDER BY Variação Salarial ASC , Cargo ASC;
+ORDER BY `Variação Salarial` ASC , `Cargo` ASC;
