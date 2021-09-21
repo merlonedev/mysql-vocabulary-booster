@@ -13,4 +13,3 @@ INNER JOIN employees AS e
 ON j.JOB_ID = e.JOB_ID
 GROUP BY Cargo
 ORDER BY 'Média salarial' ASC , Cargo ASC;
-
