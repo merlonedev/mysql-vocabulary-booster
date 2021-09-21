@@ -7,7 +7,7 @@ SELECT
 ROUND(AVG(SALARY), 2) AS 'Média salarial'
 FROM
 employees AS e
-	INNER JOIN
+INNER JOIN
 jobs AS j ON e.JOB_ID = j.JOB_ID
 WHERE JOB_TITLE = jobtitle;
 END $$
