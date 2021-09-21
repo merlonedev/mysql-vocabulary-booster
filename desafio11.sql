@@ -1,4 +1,4 @@
- SELECT 
+SELECT 
     c1.ContactName AS `Nome`,
     c1.Country AS `País`,
     COUNT(*) AS `Número de compatriotas`
