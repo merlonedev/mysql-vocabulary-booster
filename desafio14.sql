@@ -1,12 +1,12 @@
 (
 SELECT
-	c.Country AS 'País'
+c.Country AS 'País'
 FROM w3schools.customers AS c
 )
 UNION
 (
 SELECT
-	s.Country AS 'País'
+s.Country AS 'País'
 FROM w3schools.suppliers AS s
 )
 ORDER BY País
