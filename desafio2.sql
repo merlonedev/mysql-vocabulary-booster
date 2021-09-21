@@ -7,4 +7,5 @@ SELECT
         ELSE 'Altíssimo'
     END AS Nível
 FROM
-    hr.jobs;
+    hr.jobs
+ORDER BY `Cargo`;
