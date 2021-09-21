@@ -7,4 +7,4 @@ FROM
     hr.employees AS e
         INNER JOIN
     hr.jobs AS j ON e.JOB_ID = j.JOB_ID
-ORDER BY `Variação Salarial` ASC,`Cargo` ASC;
+ORDER BY `Variação Salarial`,`Cargo`;
