@@ -1,7 +1,10 @@
-(SELECT DISTINCT
-    Country
+SELECT 
+    a.Country AS 'País'
 FROM
-    w3schools.suppliers) UNION (SELECT DISTINCT
-    Country
-FROM
-    w3schools.customers) ORDER BY Country LIMIT 5;
+    ((SELECT DISTINCT
+        Country
+    FROM
+        w3schools.suppliers) UNION (SELECT DISTINCT
+        Country
+    FROM
+        w3schools.customers) ORDER BY Country LIMIT 5) AS a;
