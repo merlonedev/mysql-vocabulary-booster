@@ -14,4 +14,3 @@ FROM
     hr.employees AS E ON E.JOB_ID = J.JOB_ID
     GROUP BY E.JOB_ID
 ORDER BY `Média salarial` , Cargo;
-	
