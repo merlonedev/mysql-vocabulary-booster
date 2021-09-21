@@ -1,6 +1,6 @@
 SELECT 
     JOB_TITLE AS 'Cargo',
-    ROUND(AVG(e.SALARY)) AS 'Média salarial',
+    ROUND(AVG(e.SALARY),2) AS 'Média salarial',
     CASE
         WHEN
             ROUND(AVG(MAX_SALARY - MIN_SALARY)) >= 2000
@@ -26,4 +26,4 @@ FROM
 WHERE
     j.JOB_ID = e.JOB_ID
 GROUP BY e.JOB_ID
-ORDER BY `Média salarial` ASC , Cargo ASC;
+ORDER BY `Média salarial` ASC , `Cargo` ASC;
