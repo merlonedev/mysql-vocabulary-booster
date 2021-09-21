@@ -23,11 +23,11 @@ describe('Desafios iniciais', () => {
     sequelize = new Sequelize('hr', process.env.MYSQL_USER, process.env.MYSQL_PASSWORD, {host:process.env.HOSTNAME, dialect: 'mysql'});
   });
 
-  afterAll(async () => {
-    await sequelize.query('DROP DATABASE hr;', { type: 'RAW' });
+  // afterAll(async () => {
+  //   await sequelize.query('DROP DATABASE hr;', { type: 'RAW' });
 
-    sequelize.close();
-  });
+  //   sequelize.close();
+  // });
 
   describe('1 - Exiba os países e indicando se cada um deles se encontra ou não na região formada pela Europa', () => {
     it('Verifica o desafio 1', async () => {
