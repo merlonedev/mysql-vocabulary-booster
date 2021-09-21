@@ -1,8 +1,8 @@
 SELECT 
-    c.country_name AS País,
+    c.country_name AS País, -- criar coluna pais
     IF(r.region_name = 'Europe',
         'incluído',
-        'não incluído') AS `Status Inclusão`
+        'não incluído') AS `Status Inclusão` -- cria coluna e verifica se o pais é europeu
 FROM
     hr.countries AS c
         JOIN
