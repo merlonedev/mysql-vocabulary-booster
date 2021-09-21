@@ -1,15 +1,15 @@
 SELECT
-   coutr1.ContactName AS 'Nome',
-   coutr1.Country AS 'País',
-   COUNT(coutr1.Country) - 1 AS 'Número de compatriotas' 
+  coutr1.ContactName AS 'Nome',
+  coutr1.Country AS 'País',
+  COUNT(coutr1.Country) - 1 AS 'Número de compatriotas' 
 FROM
-   w3schools.customers AS coutr1,
-   w3schools.customers AS coutr2 
+  w3schools.customers AS coutr1,
+  w3schools.customers AS coutr2 
 WHERE
-   coutr1.Country = coutr2.Country 
+  coutr1.Country = coutr2.Country 
 GROUP BY
-   `Nome` 
+  `Nome` 
 HAVING
-   `Número de compatriotas` <> 0 
+  `Número de compatriotas` <> 0 
 ORDER BY
-   `Nome`;
+  `Nome`;
