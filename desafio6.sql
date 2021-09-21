@@ -15,4 +15,4 @@ SELECT
             DEPARTMENT_ID = e.DEPARTMENT_ID) AS 'Departamento'
 FROM
     hr.employees AS e
-ORDER BY `Nome completo` DESC , Cargo ASC;
+ORDER BY `Nome completo` DESC , Cargo DESC;
