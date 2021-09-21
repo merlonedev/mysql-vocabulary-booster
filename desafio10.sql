@@ -8,4 +8,5 @@ FROM
         JOIN
     w3schools.products AS product ON product.ProductID = detail.ProductID
 GROUP BY Produto
-HAVING Média > 20;
+HAVING Média > 20
+order by Média, Produto;
