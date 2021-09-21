@@ -10,4 +10,3 @@ FROM
         suppliers
     ORDER BY COUNTRY
     LIMIT 5) sub;
-
