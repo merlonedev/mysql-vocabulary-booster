@@ -1,16 +1,17 @@
 -- 4 - Exiba a média salarial e o nível de senioridade de todas as pessoas empregadas, agrupadas pelo cargo
 
-SELECT j.JOB_TITLE AS `Cargo`, m.`Média salarial`,
-CASE 
-WHEN m.`Média salarial` BETWEEN 2000 AND 5800 THEN 'Júnior'
-WHEN m.`Média salarial` BETWEEN 5801 AND 7500 THEN 'Pleno'
-WHEN m.`Média salarial` BETWEEN 7501 AND 10500 THEN 'Sênior'
-ELSE 'CEO'
-END AS `Senioridade`
-FROM jobs AS j
-INNER JOIN (
-	SELECT JOB_ID, (
-		SELECT ROUND(AVG(SALARY), 2) FROM employees
-WHERE JOB_ID = jobs.JOB_ID) AS `Média salarial` FROM jobs) AS m 
-ON j.JOB_ID = m.JOB_ID
-ORDER BY m.`Média salarial`, Cargo;
+SELECT 
+    jobs.JOB_TITLE AS `Cargo`,
+    ROUND(AVG(SALARY), 2) AS `Média salarial`,
+    CASE
+		WHEN ROUND(AVG(SALARY), 2) BETWEEN 2000 AND 5800 THEN 'Júnior'
+        WHEN ROUND(AVG(SALARY), 2) BETWEEN 5801 AND 7500 THEN 'Pleno'
+        WHEN ROUND(AVG(SALARY), 2) BETWEEN 7501 AND 10500 THEN 'Sênior'
+        WHEN ROUND(AVG(SALARY), 2) > 10500 THEN 'CEO'
+	END AS `Senioridade`
+FROM
+    employees
+        INNER JOIN
+    jobs ON employees.JOB_ID = jobs.JOB_ID
+GROUP BY Cargo
+ORDER BY `Média salarial` ASC, `Cargo` ASC;
