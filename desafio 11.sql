@@ -9,5 +9,7 @@ WHERE
   coutr1.Country = coutr2.Country 
 GROUP BY
   `Nome` 
+HAVING
+  `Número de compatriotas` <> 0 
 ORDER BY
   `Nome`;
