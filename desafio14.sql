@@ -1,11 +1,9 @@
-SELECT DISTINCT
-    customers.Country AS 'País'
+(SELECT DISTINCT
+    customers.Country AS `País`
 FROM
-    customers 
-UNION SELECT DISTINCT
-    Country AS 'País'
+    customers UNION (SELECT 
+    DISTINCT Country AS `País`
 FROM
     suppliers
-ORDER BY País ASC
-LIMIT 5;
+ORDER BY `País` ASC LIMIT 5;
 
