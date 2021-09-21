@@ -9,4 +9,4 @@ WHERE
     c1.Country = c2.Country
         AND c1.CustomerID <> c2.CustomerID
 GROUP BY c1.ContactName
-ORDER BY `Nome` ASC;
+ORDER BY c1.ContactName ASC;

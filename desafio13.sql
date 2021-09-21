@@ -6,4 +6,4 @@ FROM
     order_details AS od ON p.ProductID = od.ProductID
 WHERE
     od.Quantity > 80
-ORDER BY `Produto` ASC
+ORDER BY `Produto` ASC;

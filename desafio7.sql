@@ -3,9 +3,9 @@ SELECT
     j.START_DATE AS `Data de início`,
     e.SALARY AS `Salário`
 FROM
-    hr.job_history AS j
+    job_history AS j
         INNER JOIN
-    hr.employees AS e ON e.EMPLOYEE_ID = j.EMPLOYEE_ID
+    employees AS e ON e.EMPLOYEE_ID = j.EMPLOYEE_ID
 WHERE
-    MONTH(j.START_DATE) <= 3
+    MONTH(j.START_DATE) BETWEEN 1 AND 3
 ORDER BY `Nome Completo` ASC , `Data de início` ASC;
