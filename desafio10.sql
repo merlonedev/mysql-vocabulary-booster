@@ -2,4 +2,4 @@ SELECT (SELECT ProductName FROM w3schools.products WHERE ProductID = od.ProductI
 FROM w3schools.order_details AS od
 GROUP BY Produto
 HAVING Média > 20
-ORDER BY Média;
+ORDER BY Média, Produto;
