@@ -11,5 +11,5 @@ FROM
     employees AS e
         INNER JOIN
     jobs AS j ON e.JOB_ID = j.JOB_ID
-GROUP BY e.JOB_ID
-ORDER BY ROUND(AVG(e.SALARY), 2) , j.JOB_TITLE;
+GROUP BY j.JOB_ID
+ORDER BY `Média salarial` , `Cargo`;
