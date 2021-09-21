@@ -11,5 +11,3 @@ FROM
 WHERE
     shi.ShipperName IN ('Speedy Express' , 'United Package')
 ORDER BY cus.ContactName , shi.ShipperName , o.OrderDate; 
-
-
