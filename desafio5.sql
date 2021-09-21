@@ -4,5 +4,5 @@ SELECT
     TRUNCATE(MIN_SALARY / 12, 2) AS 'Média mínima mensal',
     TRUNCATE(MAX_SALARY / 12, 2) AS 'Média máxima mensal'
 FROM
-	hr.jobs
-ORDER BY (MAX_SALARY - MIN_SALARY) ASC , JOB_TITLE ASC;
+    hr.jobs
+ORDER BY (MAX_SALARY - MIN_SALARY) ASC , JOB_TITLE ASC
