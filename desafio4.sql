@@ -8,8 +8,8 @@ SELECT
         WHEN e.SALARY > 10500 THEN 'CEO'
     END AS 'Senioridade'
 FROM
-    employees AS e
+    jobs AS j
         INNER JOIN
-    jobs AS j ON e.JOB_ID = j.JOB_ID
+    employees AS e ON e.JOB_ID = j.JOB_ID
 GROUP BY j.JOB_ID
 ORDER BY `Média salarial` , `Cargo`;
