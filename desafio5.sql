@@ -1,6 +1,6 @@
 SELECT
     Cargo.job_title AS 'Cargo',
-    ROUND(Cargo.MAX_SALARY - Cargo.MIN_SALARY, 2) AS 'Variação Salarial',
+    Cargo.MAX_SALARY - Cargo.MIN_SALARY AS 'Variação Salarial',
     ROUND(Cargo.MIN_SALARY / 12, 2) AS 'Média mínima mensal',
     ROUND(Cargo.MAX_SALARY / 12, 2) AS 'Média máxima mensal'
 FROM
