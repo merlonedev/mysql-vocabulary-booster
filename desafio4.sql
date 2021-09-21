@@ -1,9 +1,7 @@
-SELECT * FROM hr.employees;
-
 SELECT 
-    job_title AS Cargo,
-    ROUND(AVG(e.salary), 2) AS 'Média salarial',
-CASE
+    j.job_title AS `Cargo`,
+    ROUND(AVG(e.salary), 2) AS `Média salarial`,
+    CASE
         WHEN ROUND(AVG(e.salary), 2) <= 5800 THEN 'Júnior'
         WHEN ROUND(AVG(e.salary), 2) <= 7500 THEN 'Pleno'
         WHEN ROUND(AVG(e.salary), 2) <= 10500 THEN 'Sênior'
@@ -11,7 +9,7 @@ CASE
     END AS `Senioridade`
 FROM
     hr.jobs AS j
-    JOIN
-    hr.employees AS e ON j.job_id = e.job_id
+        JOIN
+    employees AS e ON j.job_id = e.job_id
 GROUP BY j.job_id
-ORDER BY 'Média salarial', 'Cargo';
+ORDER BY `Média salarial` , `Cargo`;
