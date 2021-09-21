@@ -6,5 +6,4 @@ FROM
     w3schools.products AS p ON od.ProductID = p.ProductID
 WHERE
     od.quantity > 80
-GROUP BY `Produto`
 ORDER BY `Produto`;
