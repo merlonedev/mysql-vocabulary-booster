@@ -6,4 +6,5 @@ SELECT
 FROM
     hr.countries
         JOIN
-    hr.regions ON hr.countries.REGION_ID = hr.regions.REGION_ID;
+    hr.regions ON hr.countries.REGION_ID = hr.regions.REGION_ID
+ORDER BY COUNTRY_NAME;
