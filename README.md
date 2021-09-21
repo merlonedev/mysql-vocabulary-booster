@@ -648,9 +648,7 @@ Chamando-a dessa forma, sua procedure deve mostrar que a pessoa funcionária `Ne
 
 Para sinalizar que o seu projeto está pronto para o _"Code Review"_ de colegas, faça o seguinte:
 
-* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque as pessoas de quem quer receber o review:
-
-  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
+* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque as pessoas de quem quer receber o review  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
 
   * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
 
