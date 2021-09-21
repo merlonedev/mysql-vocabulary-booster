@@ -1,13 +1,13 @@
 SELECT
     s.Country AS 'País'
 FROM
-    (SELECT DISTINCT
+(SELECT DISTINCT
         Country
-    FROM
+FROM
         w3schools.suppliers UNION ALL 
-	SELECT DISTINCT
+SELECT DISTINCT
         Country
-    FROM
+FROM
         w3schools.customers
-    ORDER BY Country
-    LIMIT 5) AS s;
+ORDER BY Country
+LIMIT 5) AS s;
