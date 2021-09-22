@@ -7,4 +7,3 @@ ORDER BY COUNT(o.OrderID);
 -- Ao fazer o COUNT do employee_id na tabela orders, o mysql entende que Fulano(employee_id=1,por exemplo)
 -- fez o pedido 5 vezes. Aí vai agrupar com o nome da pessoa fulana.
 -- Então deve aparecer o nome completo dela e total de pedidos = 5, nesse exemplo.
- 
