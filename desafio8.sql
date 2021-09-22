@@ -1,13 +1,13 @@
 SELECT 
-    CU.ContactName AS 'Nome de contato',
-    S.ShipperName AS 'Empresa que fez o envio',
-    O.OrderDate AS 'Data do pedido'
+c.ContactName AS 'Nome de contato',
+s.ShipperName AS 'Empresa que fez o envio',
+o.OrderDate AS 'Data do pedido'
 FROM
-    customers AS CU
-        JOIN
-    orders AS O ON O.CustomerID = CU.CustomerID
-        JOIN
-    shippers AS S ON O.ShipperID = S.ShipperID
+customers AS c
+JOIN
+orders AS o ON o.CustomerID = c.CustomerID
+JOIN
+shippers AS s ON o.ShipperID = s.ShipperID
 WHERE
-    S.ShipperName IN ('Speedy Express' , 'United Package')
-ORDER BY CU.ContactName , S.ShipperName;
+s.ShipperName IN ('Speedy Express' , 'United Package')
+ORDER BY c.ContactName , s.ShipperName;
