@@ -7,5 +7,7 @@ FROM
     products AS p
         INNER JOIN
     order_details AS od ON p.ProductID = od.ProductID
+WHERE
+    (SELECT ROUND(AVG(od.Quantity), 2)) > 20
 GROUP BY p.ProductName
-ORDER BY `Média`, `Produto`
+ORDER BY `Média` , `Produto`
