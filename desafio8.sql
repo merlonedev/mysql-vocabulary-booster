@@ -9,5 +9,5 @@ FROM
         INNER JOIN
     w3schools.orders AS o ON c.CustomerID = o.CustomerID
         AND s.ShipperID = o.ShipperID
+        WHERE s.ShipperName IN ('Speedy Express', 'United Package')
 ORDER BY c.ContactName, s.ShipperName, o.OrderDate;
-
