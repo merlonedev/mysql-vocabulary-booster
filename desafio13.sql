@@ -3,10 +3,8 @@ SELECT
     p.Price AS 'Preço'
 FROM
     w3schools.products AS p
-INNER JOIN
-	  w3schools.order_details AS o
-ON
-  	p.ProductID = o.ProductID
+INNER JOIN w3schools.order_details AS o
+ON p.ProductID = o.ProductID
 WHERE
     o.Quantity > 80
 ORDER BY `Produto`;
