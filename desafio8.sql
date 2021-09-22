@@ -16,4 +16,4 @@ FROM
     w3schools.orders
 WHERE
     ShipperID IN (1 , 2)
-ORDER BY 1 , 2;
+ORDER BY 1 , 2, 3;
