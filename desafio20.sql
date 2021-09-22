@@ -11,13 +11,13 @@ SELECT
     dep.DEPARTMENT_NAME AS 'Departamento',
     job.JOB_TITLE AS 'Cargo'
 FROM
-	hr.job_history jh
-		JOIN
-    hr.employees emp ON emp.EMPLOYEE_ID = jh.EMPLOYEE_ID
-        JOIN
-    hr.departments dep ON dep.DEPARTMENT_ID = jh.DEPARTMENT_ID
-        JOIN
-    hr.jobs job ON job.JOB_ID = jh.JOB_ID
+hr.job_history jh
+	JOIN
+hr.employees emp ON emp.EMPLOYEE_ID = jh.EMPLOYEE_ID
+	JOIN
+hr.departments dep ON dep.DEPARTMENT_ID = jh.DEPARTMENT_ID
+	JOIN
+hr.jobs job ON job.JOB_ID = jh.JOB_ID
 WHERE
     emp.EMAIL LIKE concat(email, '%')
 ORDER BY 2 , 3;
