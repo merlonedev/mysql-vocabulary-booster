@@ -9,4 +9,3 @@ FROM
 WHERE
     MONTH(jh.START_DATE) IN (01 , 02, 03)
 ORDER BY `Nome Completo` , HIRE_DATE
-

@@ -13,4 +13,3 @@ FROM
     jobs AS job ON emplo.JOB_ID = job.JOB_ID
 GROUP BY JOB_TITLE
 ORDER BY `Média salarial`, `Cargo`;
-
