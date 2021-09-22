@@ -1,10 +1,10 @@
 SELECT 
-    Country
+  Country
 FROM
-    w3schools.customers 
+  w3schools.customers 
 UNION SELECT 
-    Country
+  Country
 FROM
-    w3schools.suppliers
+  w3schools.suppliers
 ORDER BY Country
 LIMIT 5;

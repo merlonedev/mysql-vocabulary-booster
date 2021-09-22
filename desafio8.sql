@@ -4,9 +4,9 @@ SELECT
   o.OrderDate AS `Data do pedido`
 FROM
 	w3schools.orders o
-		INNER JOIN
+INNER JOIN
 	w3schools.customers c ON o.CustomerID = c.CustomerID
-		INNER JOIN
+INNER JOIN
 	w3schools.shippers s ON o.ShipperID = s.ShipperID
 WHERE s.ShipperName IN ('Speedy Express', 'United Package')
 ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`;

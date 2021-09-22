@@ -5,5 +5,5 @@ FROM
   w3schools.order_details od
 WHERE
 	p.ProductID = od.ProductID
-		AND od.Quantity > 80
+AND od.Quantity > 80
 ORDER BY `Produto`;
