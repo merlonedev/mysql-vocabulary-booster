@@ -9,4 +9,5 @@ FROM
         INNER JOIN
     w3schools.orders AS o ON c.CustomerID = o.CustomerID
         AND s.ShipperID = o.ShipperID
-ORDER BY c.ContactName , s.ShipperName , o.OrderDate;
+ORDER BY c.ContactName, s.ShipperName, o.OrderDate;
+
