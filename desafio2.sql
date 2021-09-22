@@ -6,4 +6,4 @@ SELECT
     WHEN MAX_SALARY BETWEEN 20001 AND 30000 THEN "Alto"
     ELSE ""
   END AS "Nível"
-   FROM hr.jobs;
+    FROM hr.jobs;
