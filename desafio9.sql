@@ -3,7 +3,7 @@
 --   *A primeira deve possuir o alias "Nome completo" e exibir o nome completo da pessoa funcionária (não se esqueça do espaço entre o nome e o sobrenome).
 --   *A segunda deve possuir o alias "Total de pedidos" e exibir a quantidade total de pedidos feitos pela pessoa.
 -- Ordene seus resultados pelo total de pedidos em ordem crescente.
-SELECT CONCAT(e.LastName, ' ', e.FirstName) AS `Nome completo`, COUNT(o.EmployeeID) AS `Total de pedidos`
+SELECT CONCAT(e.FirstName, ' ', e.LastName) AS `Nome completo`, COUNT(o.EmployeeID) AS `Total de pedidos`
 FROM w3schools.employees AS e
 INNER JOIN w3schools.orders as o ON e.EmployeeID = o.EmployeeID
 GROUP BY CONCAT(e.LastName, ' ', e.FirstName)
