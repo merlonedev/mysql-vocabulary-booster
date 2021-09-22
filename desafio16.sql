@@ -5,7 +5,7 @@ CREATE FUNCTION
 RETURNS INT READS SQL DATA
 BEGIN
     DECLARE jobsons INT;
-    SELECT COUNT(*) AS 'Totais de empregos'
+    SELECT COUNT(*) AS total_empregos
     FROM     
         hr.jobs_history AS h
             INNER JOIN
