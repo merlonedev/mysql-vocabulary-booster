@@ -8,4 +8,4 @@ FROM
     hr.job_history AS jh
         JOIN
     hr.employees AS e ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID
-ORDER BY `Nome completo` , `Data de início`;
+ORDER BY `Nome completo` , `Anos trabalhados`;
