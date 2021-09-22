@@ -1,0 +1,4 @@
+SELECT 
+  JOB_TITLE AS Cargo,
+  MAX_SALARY - MIN_SALARY AS "Nível"
+FROM hr.jobs;
