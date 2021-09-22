@@ -14,4 +14,5 @@ SELECT
         WHERE
             dpt.DEPARTMENT_ID = E.DEPARTMENT_ID) AS Departamento
 FROM
-    employees AS E;
+    employees AS E
+ORDER BY `Nome completo`, `Cargo`;
