@@ -9,4 +9,3 @@ FROM
     w3schools.order_details AS od ON od.ProductID = p.ProductID
     GROUP BY p.ProductName
     ORDER BY ROUND(AVG(od.Quantity), 2), p.ProductName;
-    
