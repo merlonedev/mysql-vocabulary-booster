@@ -4,15 +4,16 @@ const Importer = require("mysql-import");
 
 describe("Desafios iniciais", () => {
   let sequelize;
+  const {
+    MYSQL_USER,
+    MYSQL_PASSWORD,
+    HOSTNAME
+  } = process.env;
 
   beforeAll(async () => {
-    const { MYSQL_USER, MYSQL_PASSWORD, HOSTNAME } = process.env;
-
-    const importer = new Importer({
-      user: MYSQL_USER,
-      password: MYSQL_PASSWORD,
-      host: HOSTNAME,
-    });
+    const importer = new Importer(
+      { user: MYSQL_USER, password: MYSQL_PASSWORD, host: HOSTNAME }
+    );
 
     await importer.import("./hr.sql");
 
@@ -27,9 +28,16 @@ describe("Desafios iniciais", () => {
   });
 
   afterAll(async () => {
-    await sequelize.query("DROP DATABASE hr;", { type: "RAW" });
-
+    await sequelize.query('DROP DATABASE hr;', { type: 'RAW' });
     sequelize.close();
+    
+
+    if (process.argv.some(arg => arg === '-restore')) {
+      const importer = new Importer(
+        { user: MYSQL_USER, password: MYSQL_PASSWORD, host: HOSTNAME }
+      );
+      await importer.import('./hr.sql');
+    }
   });
 
   describe("1 - Exiba os países e indicando se cada um deles se encontra ou não na região formada pela Europa", () => {
