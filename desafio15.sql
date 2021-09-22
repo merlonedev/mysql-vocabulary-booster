@@ -11,7 +11,7 @@ BEGIN
   INNER JOIN hr.jobs AS J
   ON E.JOB_ID =  J.JOB_ID
   WHERE
-   J.JOB_TITLE = cargo;
+    J.JOB_TITLE = cargo;
 END $$
 
 DELIMITER ;
