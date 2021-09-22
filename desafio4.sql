@@ -16,4 +16,4 @@ GROUP BY
 ORDER BY 
   `Média Salarial`, 
   `Cargo`;
-  
+
