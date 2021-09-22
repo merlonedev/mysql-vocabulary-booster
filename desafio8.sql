@@ -7,4 +7,4 @@ ON O.CustomerID = C.CustomerID
 RIGHT JOIN w3schools.shippers S
 ON O.ShipperID = S.ShipperID
 WHERE O.ShipperID IN (1, 2)
-ORDER BY `Nome do contato`, `Empresa que fez o envio`, `Data do pedido`;
+ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`;
