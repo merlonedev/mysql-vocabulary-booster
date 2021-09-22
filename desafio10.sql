@@ -9,4 +9,4 @@ FROM
     order_details AS od ON p.ProductID = od.ProductID
 GROUP BY p.ProductName
 HAVING ROUND(AVG(od.Quantity), 2) > 20
-ORDER BY ROUND(AVG(od.Quantity), 2)
+ORDER BY ROUND(AVG(od.Quantity), 2), p.ProductName;
