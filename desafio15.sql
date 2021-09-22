@@ -1,13 +1,15 @@
+USE hr;
 DELIMITER $$
 
-CREATE PROCEDURE buscar_media_por_cargo(IN cargo VARCHAR(30))
+CREATE PROCEDURE buscar_media_por_cargo(IN job VARCHAR(50))
 BEGIN
-SELECT sub.Media AS 'Média salarial'
-FROM (SELECT j.JOB_TITLE, ROUND(AVG(e.SALARY), 2) AS 'Media' FROM hr.employees AS e
-	INNER JOIN hr.jobs AS j
-ON e.JOB_ID = j.JOB_ID
-	GROUP BY j.JOB_TITLE) AS sub
-	WHERE sub.JOB_TITLE LIKE CONCAT('%',cargo,'%');
-END
-$$
+SELECT ROUND(AVG(employees.SALARY), 2) AS 'Média salarial'
+FROM
+    hr.employees AS employees
+        INNER JOIN
+    hr.jobs AS jobs ON jobs.JOB_TITLE = job
+        AND jobs.JOB_ID = employees.JOB_ID
+GROUP BY employees.JOB_ID;
+END $$
+
 DELIMITER ;
