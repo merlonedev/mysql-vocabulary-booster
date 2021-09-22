@@ -8,4 +8,5 @@ FROM
         INNER JOIN
     w3schools.orders AS o ON od.OrderID = o.OrderID
         AND e.EmployeeID = o.EmployeeID
+GROUP BY CONCAT(e.FirstName, ' ', e.LastName)
 ORDER BY od.Quantity;
