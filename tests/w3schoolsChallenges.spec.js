@@ -91,7 +91,7 @@ describe('Desafios iniciais', () => {
     });
   });
 
-  describe.skip('17 - Crie uma TRIGGER que, a cada nova inserção realizada na tabela `orders`, insira automaticamente a data atual na coluna `OrderDate`', () => {
+  describe('17 - Crie uma TRIGGER que, a cada nova inserção realizada na tabela `orders`, insira automaticamente a data atual na coluna `OrderDate`', () => {
     it('Verifica o desafio 17', async () => {
       const challengeQuery = readFileSync("desafio17.sql", "utf8").trim();
       const expectedResult = require("./challengesResults/challengeResult17");
