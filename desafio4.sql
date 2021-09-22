@@ -4,7 +4,7 @@ SELECT
     CASE
         WHEN AVG(E.SALARY) <= 5800 THEN 'Júnior'
         WHEN AVG(E.SALARY) <= 7800 THEN 'Pleno'
-        WHEN AVG(E.SALARY) <= 10500 THEN 'Senior'
+        WHEN AVG(E.SALARY) <= 10500 THEN 'Sênior'
         ELSE 'CEO'
     END AS Senioridade
 FROM
