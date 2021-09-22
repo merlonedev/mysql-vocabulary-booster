@@ -7,7 +7,7 @@ DECLARE JobQuantity TINYINT;
 SELECT COUNT(emp.FIRST_NAME)
     FROM hr.job_history AS jh
 JOIN 
-	hr.employees as emp ON emp.EMPLOYEE_ID = jh.EMPLOYEE_ID
+hr.employees AS emp ON emp.EMPLOYEE_ID = jh.EMPLOYEE_ID
 WHERE emp.EMAIL = 'NKOCHHAR'
 GROUP BY jh.EMPLOYEE_ID
     INTO JobQuantity;
