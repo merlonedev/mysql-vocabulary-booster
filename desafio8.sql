@@ -8,4 +8,6 @@ FROM
     w3schools.orders AS o ON c.CustomerID = o.CustomerID
         JOIN
     w3schools.shippers AS s ON s.ShipperID = o.ShipperID
+WHERE
+    s.ShipperName IN ('Speedy Express' , 'United Package')
 ORDER BY `Nome de contato` ASC , `Empresa que fez o envio` ASC , `Data do pedido` ASC;
