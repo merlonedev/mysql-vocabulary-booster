@@ -2,14 +2,10 @@ DELIMITER $$
 
 CREATE PROCEDURE buscar_media_por_cargo(IN cargoNome VARCHAR(100))
 BEGIN
-SELECT
-	ROUND(AVG(e.salary), 2) 'Média Salarial'
-FROM
-	hr.jobs j
-		INNER JOIN
-	hr.employees e ON e.JOB_ID = j.JOB_ID
-WHERE
-	j.JOB_TITLE = cargoNome;
+	SELECT ROUND(AVG(e.SALARY), 2) 'Média salarial'
+  FROM hr.jobs j
+  INNER JOIN hr.employees e ON e.JOB_ID = j.JOB_ID
+  WHERE j.JOB_TITLE = cargoNome;
 END $$
 
 DELIMITER ;
