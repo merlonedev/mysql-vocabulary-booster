@@ -13,4 +13,3 @@ FROM
     employees E ON J.JOB_ID = E.JOB_ID
 GROUP BY JOB_TITLE
 ORDER BY `Média salarial` , J.JOB_TITLE; 
-
