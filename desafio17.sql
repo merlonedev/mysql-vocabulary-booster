@@ -5,7 +5,7 @@ BEFORE INSERT ON orders
 FOR EACH ROW
 BEGIN
 SET
-	NEW.OrderDate = now();
+NEW.OrderDate = now();
 END;
 
 $$
