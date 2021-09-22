@@ -3,4 +3,3 @@
 --   *A primeira deve possuir o alias "Nome completo" e exibir o nome completo da pessoa funcionária (não se esqueça do espaço entre o nome e o sobrenome).
 --   *A segunda deve possuir o alias "Total de pedidos" e exibir a quantidade total de pedidos feitos pela pessoa.
 -- Ordene seus resultados pelo total de pedidos em ordem crescente.
-
