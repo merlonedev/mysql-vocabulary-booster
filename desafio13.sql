@@ -9,4 +9,3 @@ WHERE
     WHERE P.ProductID = OD.ProductID
   ) > 80
 ORDER BY `Produto`;
-  
