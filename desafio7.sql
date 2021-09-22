@@ -8,4 +8,4 @@ FROM
     employees AS EMP ON JH.EMPLOYEE_ID = EMP.EMPLOYEE_ID
 WHERE
     MONTH(JH.START_DATE) IN (1 , 2, 3)
-ORDER BY `Nome complet` , JH.START_DATE;
+ORDER BY `Nome completo` , JH.START_DATE;
