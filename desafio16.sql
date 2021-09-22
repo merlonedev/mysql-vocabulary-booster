@@ -1,7 +1,8 @@
 USE hr;
 
 CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario (EMAIL VARCHAR(150))
-RETURNS INT DETERMINISTIC
+RETURNS INT
+READS SQL DATA
 RETURN (SELECT COUNT(*)
 FROM hr.job_history JH
 INNER JOIN hr.employees E
