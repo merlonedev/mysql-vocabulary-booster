@@ -4,9 +4,9 @@ SELECT
     o.OrderDate AS 'Data do pedido'
 FROM
     customers AS c
-        INNER JOIN
+        JOIN
     orders AS o ON o.CustomerID = c.CustomerID
-        INNER JOIN
+        JOIN
     shippers AS s ON s.ShipperID = o.ShipperID
 WHERE
     s.ShipperName IN ('Speedy Express', 'United Package')
