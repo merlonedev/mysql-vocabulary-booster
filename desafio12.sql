@@ -4,7 +4,7 @@ SELECT
     e1.PHONE_NUMBER AS `Telefone funcionário 1`,
 	CONCAT(e2.FIRST_NAME, ' ', e2.LAST_NAME) AS `Nome completo funcionário 2`,
     e2.SALARY AS `Salário funcionário 2`,
-    e1.PHONE_NUMBER AS `Telefone funcionário 1`
+    e2.PHONE_NUMBER AS `Telefone funcionário 2`
 FROM
 	hr.employees e1,
     hr.employees e2
