@@ -1,5 +1,5 @@
 SELECT 
-    J.JOB_TITLE,
+    J.JOB_TITLE AS Cargo,
     ROUND(AVG(E.SALARY), 2) AS 'Média salarial',
     CASE
         WHEN AVG(E.SALARY) <= 5800 THEN 'Júnior'
