@@ -25,7 +25,7 @@ describe('Desafios iniciais', () => {
   afterAll(async () => {
     await sequelize.query('DROP DATABASE hr;', { type: 'RAW' });
     sequelize.close();
-    
+
 
     if (process.argv.some(arg => arg === '-restore')) {
       const importer = new Importer(
