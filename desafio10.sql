@@ -10,4 +10,4 @@ WHERE
     o.ProductID = p.ProductID
 GROUP BY o.ProductID
 HAVING AVG(o.Quantity) > 20
-ORDER BY 'Média' , 'Produto';
+ORDER BY Média , Produto;

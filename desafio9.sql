@@ -7,4 +7,4 @@ FROM
 WHERE
     e.EmployeeID = o.EmployeeID
 GROUP BY e.EmployeeID
-ORDER BY 'Total de pedidos';
+ORDER BY `Total de pedidos`;
