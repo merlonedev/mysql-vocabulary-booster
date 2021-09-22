@@ -5,13 +5,13 @@ RETURNS INT
 READS SQL DATA 
 BEGIN
 	RETURN (
-	select
-	count(employee_id) 
-	from employees
-	where 
-	year(hire_date) = ano
-    and
-    month(hire_date) = mes
+	SELECT 
+    COUNT(employee_id)
+FROM
+    employees
+WHERE
+    YEAR(hire_date) = ano
+        AND MONTH(hire_date) = mes
     );
 END
 $$
