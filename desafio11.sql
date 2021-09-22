@@ -1,12 +1,16 @@
+-- 11 - Exibe todas as pessoas clientes **que possuem compatriotas**,
+-- mostrando a quantidade de compatriotas para cada pessoa cliente
+
 SELECT 
-    A.ContactName AS 'Nome',
-    A.Country AS 'País',
-    COUNT(*) AS 'Número de compatriotas'
+    c.ContactName AS 'Nome',
+    c.Country AS 'País',
+    (SELECT 
+            COUNT(Country) - 1
+        FROM
+            customers AS cc
+        WHERE
+            c.Country = cc.Country) AS 'Número de compatriotas'
 FROM
-    customers A,
-    customers B
-WHERE
-    A.Country = B.Country
-        AND A.CustomerID <> B.CustomerID
-GROUP BY A.ContactName
-ORDER BY A.ContactName ASC;
+    customers AS c
+HAVING `Número de compatriotas` > 0
+ORDER BY c.ContactName;
