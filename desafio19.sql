@@ -4,8 +4,8 @@ CREATE FUNCTION exibir_quantidade_pessoas_contratadas_por_mes_e_ano (mes int, an
 RETURNS INT
 READS SQL DATA 
 BEGIN
-	RETURN (
-	SELECT 
+RETURN (
+SELECT 
     COUNT(employee_id)
 FROM
     employees
