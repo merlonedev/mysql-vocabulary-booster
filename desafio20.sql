@@ -1,9 +1,9 @@
 DELIMITER $$
 
 CREATE PROCEDURE
-	exibir_historico_completo_por_funcionario(email varchar(30))
+exibir_historico_completo_por_funcionario(email varchar(30))
 BEGIN
-	SELECT 
+SELECT 
     CONCAT(emp.FIRST_NAME, ' ', emp.LAST_NAME) AS `Nome completo`,
     d.DEPARTMENT_NAME AS Departamento,
     j.JOB_TITLE AS Cargo
@@ -23,4 +23,3 @@ END
 $$
 
 DELIMITER ;
-
