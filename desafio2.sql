@@ -8,4 +8,4 @@ SELECT
     END AS 'Nível'
 FROM
     hr.jobs
-ORDER BY 'Cargo';
+ORDER BY `Cargo`;
