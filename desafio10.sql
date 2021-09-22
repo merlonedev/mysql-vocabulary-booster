@@ -8,4 +8,5 @@ FROM
         INNER JOIN
     w3schools.order_details AS od ON od.ProductID = p.ProductID
     GROUP BY p.ProductName
+    HAVING ROUND(AVG(od.Quantity), 2) > 20
     ORDER BY ROUND(AVG(od.Quantity), 2), p.ProductName;
