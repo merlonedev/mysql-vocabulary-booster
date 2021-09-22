@@ -24,6 +24,6 @@ SELECT
                     job_history.start_date) / 365, 2) AS 'Anos trabalhados'
 FROM
     hr.job_history AS job_history
-		JOIN
+	    	JOIN
     hr.employees AS employees ON job_history.employee_id = employees.employee_id
 ORDER BY `Nome completo` ASC , `Anos trabalhados` ASC;
