@@ -3,12 +3,11 @@ SELECT
     s.ShipperName AS 'Empresa que fez o envio',
     o.OrderDate AS 'Data do pedido'
 FROM
-    w3schools.customers AS c
+    customers AS c
         INNER JOIN
-    w3schools.orders AS o ON o.CustomerID = c.CustomerID
+    orders AS o ON o.CustomerID = c.CustomerID
         INNER JOIN
-    w3schools.shippers AS s ON s.ShipperID = o.ShipperID
+    shippers AS s ON s.ShipperID = o.ShipperID
 WHERE
-    s.ShipperName = 'Speedy Express'
-        OR s.ShipperName = 'United Package'
+    s.ShipperName IN ('Speedy Express', 'United Package')
 ORDER BY c.ContactName , s.ShipperName , o.OrderDate;
