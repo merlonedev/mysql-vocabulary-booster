@@ -9,4 +9,4 @@ SELECT
 FROM
     orders AS o
 GROUP BY `Nome completo`
-ORDER BY `Total de pedidos` ASC;
+ORDER BY `Nome completo`;
