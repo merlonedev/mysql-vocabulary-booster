@@ -9,4 +9,3 @@ FROM
         AND c1.ContactName <> c2.ContactName
 GROUP BY c1.ContactName
 ORDER BY c1.ContactName;
-    
