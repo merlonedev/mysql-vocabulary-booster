@@ -10,4 +10,3 @@ FROM hr.employees AS t1 JOIN
 WHERE 
   t1.EMPLOYEE_ID != t2.EMPLOYEE_ID
 ORDER BY `Nome completo funcionário 1`, `Nome completo funcionário 2`;
-
