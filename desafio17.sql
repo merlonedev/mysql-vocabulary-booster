@@ -1,5 +1,5 @@
 DELIMITER $$
-CREATE TRIGGER trigger_order_insert
+CREATE TRIGGER trigger_insere_data_na_coluna_orderdate
 BEFORE INSERT ON w3schools.orders
 FOR EACH ROW
 BEGIN
