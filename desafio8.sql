@@ -1,7 +1,7 @@
 SELECT 
-    CU.ContactName AS `Nome de contato`,
-    S.ShipperName AS `Empresa que fez o envio`,
-    O.OrderDate AS `Data do pedido`
+    CU.ContactName AS 'Nome de contato',
+    S.ShipperName AS 'Empresa que fez o envio',
+    O.OrderDate AS 'Data do pedido'
 FROM
     customers AS CU
         JOIN
