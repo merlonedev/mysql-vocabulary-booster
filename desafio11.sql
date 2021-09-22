@@ -8,4 +8,5 @@ FROM
 WHERE
     t1.Country = t2.Country
 GROUP BY t1.ContactName
+HAVING (COUNT(t1.Country = t2.Country) - 1) > 0
 ORDER BY t1.ContactName;
