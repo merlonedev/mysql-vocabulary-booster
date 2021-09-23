@@ -11,4 +11,3 @@ FROM
 ORDER BY `Nome completo`, `Anos trabalhados`;
 
 
-
