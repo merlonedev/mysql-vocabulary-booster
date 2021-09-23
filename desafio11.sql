@@ -6,5 +6,3 @@ FROM
     customers as c1 
 having `Número de compatriotas` > 0
 ORDER BY ContactName;
-
-
