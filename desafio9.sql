@@ -5,5 +5,5 @@ FROM
     employees AS e
         JOIN
     orders AS o ON o.EmployeeID = e.EmployeeID
-GROUP BY `Nome Completo`
+GROUP BY `Nome completo`
 ORDER BY `Total de pedidos`;
