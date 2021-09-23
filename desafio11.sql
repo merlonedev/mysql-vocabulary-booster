@@ -11,5 +11,3 @@ AND
   c1.ContactName <> c2.ContactName
 GROUP BY c1.CustomerID
 ORDER BY c1.ContactName;
-  
-
