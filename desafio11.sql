@@ -6,4 +6,5 @@ FROM
   w3schools.customers AS c1
 JOIN w3schools.customers AS c2 ON c1.Country = c2.Country
 GROUP BY `País`, `Nome`
+HAVING `Número de compatriotas` > 0
 ORDER BY `Nome`;
