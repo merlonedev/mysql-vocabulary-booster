@@ -12,4 +12,3 @@ FROM
         INNER JOIN
     hr.employees AS e ON e.employee_id = jh.EMPLOYEE_ID
 ORDER BY `Nome Completo` DESC , `Cargo`;
-

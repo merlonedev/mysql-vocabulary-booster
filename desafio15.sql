@@ -8,13 +8,13 @@ BEGIN
     FROM 
 		hr.employees
     WHERE job_id =
-		(SELECT 
-				job_id 
-			FROM 
-				hr.jobs 
-			WHERE 
-				job_title = job
-		);
+	(SELECT 
+			job_id 
+		FROM 
+			hr.jobs 
+		WHERE 
+			job_title = job
+	);
 END $$
 DELIMITER ;
 
