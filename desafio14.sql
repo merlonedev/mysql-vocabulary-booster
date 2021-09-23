@@ -1,5 +1,5 @@
 SELECT DISTINCT
-    *
+    Country AS 'País'
 FROM
     ((SELECT 
         Country
