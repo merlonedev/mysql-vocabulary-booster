@@ -9,5 +9,3 @@ FROM
         INNER JOIN
     hr.job_history AS jh ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID
 ORDER BY `Nome completo`, `Anos trabalhados`;
-
-
