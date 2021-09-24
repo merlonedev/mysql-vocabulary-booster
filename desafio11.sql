@@ -9,4 +9,4 @@ WHERE
     c1.Country = c2.Country
 GROUP BY c1.ContactName
 HAVING COUNT(c1.Country) - 1 > 0
-ORDER BY c1.ContactName;
+ORDER BY Nome;
