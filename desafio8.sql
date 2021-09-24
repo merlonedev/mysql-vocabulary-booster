@@ -9,4 +9,3 @@ INNER JOIN w3schools.shippers AS shi
 ON ord.ShipperID = shi.ShipperID
 WHERE shi.ShipperName IN('Speedy Express', 'United Package')
 ORDER BY cus.ContactName, shi.ShipperName, ord.OrderDate;
-  
