@@ -1,5 +1,4 @@
 USE hr;
-
 DELIMITER $$
 CREATE PROCEDURE exibir_historico_completo_por_funcionario (IN employee_email VARCHAR(20))
 BEGIN
