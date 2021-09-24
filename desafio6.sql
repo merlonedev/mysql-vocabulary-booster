@@ -20,4 +20,5 @@ SELECT
             hr.departments.DEPARTMENT_ID = hr.job_history.DEPARTMENT_ID) AS 'Departamento'
 FROM
     hr.job_history
+WHERE EMPLOYEE_ID <> 0
 ORDER BY 1 DESC , 2;
