@@ -148,7 +148,7 @@ describe('Desafios iniciais', () => {
     });
   });
 
-  describe.only('19 - Crie uma função chamada `exibir_quantidade_pessoas_contratadas_por_mes_e_ano` no banco de dados `hr` que, dados o mês e ano como parâmetros nessa ordem, retorna a quantidade de pessoas funcionárias **que foram contratadas** nesse mês e ano', () => {
+  describe('19 - Crie uma função chamada `exibir_quantidade_pessoas_contratadas_por_mes_e_ano` no banco de dados `hr` que, dados o mês e ano como parâmetros nessa ordem, retorna a quantidade de pessoas funcionárias **que foram contratadas** nesse mês e ano', () => {
     it('Verifica o desafio 19', async () => {
       const challengeQuery = readFileSync('desafio19.sql', 'utf8').trim();
       const createFunctionQuery = /CREATE FUNCTION.*END/si.exec(challengeQuery)[0];
@@ -166,7 +166,7 @@ describe('Desafios iniciais', () => {
     });
   });
 
-  describe('20 - Toda pessoa funcionária no banco `hr` possui um histórico completo de cargos. Logo, crie uma procedure chamada `exibir_historico_completo_por_funcionario` que, dado o e-mail de uma pessoa funcionária, retorna todos os cargos em seu histórico', () => {
+  describe.only('20 - Toda pessoa funcionária no banco `hr` possui um histórico completo de cargos. Logo, crie uma procedure chamada `exibir_historico_completo_por_funcionario` que, dado o e-mail de uma pessoa funcionária, retorna todos os cargos em seu histórico', () => {
     it('Verifica o desafio 20', async () => {
       const challengeQuery = readFileSync('desafio20.sql', 'utf8').trim();
       const createProcedureQuery = /CREATE PROCEDURE.*END/si.exec(challengeQuery)[0];
