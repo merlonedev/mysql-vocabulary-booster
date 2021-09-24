@@ -4,7 +4,6 @@ SELECT
 FROM
     employees e
 JOIN
-	orders o
-    on e.EmployeeID = o.EmployeeID
+orders o on e.EmployeeID = o.EmployeeID
 GROUP BY o.EmployeeID
 ORDER BY `Total de pedidos`;
