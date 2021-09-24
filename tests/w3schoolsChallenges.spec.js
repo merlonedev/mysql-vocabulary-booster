@@ -82,7 +82,7 @@ describe('Desafios iniciais', () => {
     });
   });
 
-  describe.only('14 - Considerando o conjunto formado pelas pessoas consumidoras e empresas fornecedoras de produtos, queremos saber quais são os cinco primeiros países distintos, em ordem alfabética, presentes nesse conjunto', () => {
+  describe('14 - Considerando o conjunto formado pelas pessoas consumidoras e empresas fornecedoras de produtos, queremos saber quais são os cinco primeiros países distintos, em ordem alfabética, presentes nesse conjunto', () => {
     it('Verifica o desafio 14', async () => {
       const challengeQuery = readFileSync('desafio14.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult14');
@@ -91,7 +91,7 @@ describe('Desafios iniciais', () => {
     });
   });
 
-  describe('17 - Crie uma TRIGGER que, a cada nova inserção realizada na tabela `orders`, insira automaticamente a data atual na coluna `OrderDate`', () => {
+  describe.only('17 - Crie uma TRIGGER que, a cada nova inserção realizada na tabela `orders`, insira automaticamente a data atual na coluna `OrderDate`', () => {
     it('Verifica o desafio 17', async () => {
       const challengeQuery = readFileSync("desafio17.sql", "utf8").trim();
       const expectedResult = require("./challengesResults/challengeResult17");
