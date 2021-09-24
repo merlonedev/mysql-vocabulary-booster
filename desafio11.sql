@@ -8,4 +8,3 @@ FROM
     w3schools.customers
 GROUP BY `País`
 ORDER BY `Nome`;
-
