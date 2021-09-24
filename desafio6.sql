@@ -10,5 +10,5 @@ FROM
         INNER JOIN
     hr.employees e ON e.EMPLOYEE_ID = h.EMPLOYEE_ID
         INNER JOIN
-    hr.jobs j ON j.JOB_ID = e.JOB_ID
+    hr.jobs j ON j.JOB_ID = h.JOB_ID
 ORDER BY e.FIRST_NAME DESC , j.JOB_TITLE;
