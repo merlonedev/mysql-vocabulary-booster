@@ -7,4 +7,4 @@ on c.CustomerID = o.CustomerID
 inner join w3schools.shippers as s
 on o.ShipperID = s.ShipperID
 where s.ShipperName = 'Speedy Express' or s.ShipperName = 'United Package'
-order by `Nome de contato`, `Empresa que fez o envio`;
+order by `Nome de contato` asc, `Empresa que fez o envio` asc, `Data do pedido` asc;
