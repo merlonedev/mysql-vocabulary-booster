@@ -5,6 +5,6 @@ CREATE TRIGGER InsereDataDeInsercao
   BEFORE INSERT ON orders
   FOR EACH ROW
 BEGIN
-     SET NEW.OrderDate = NOW();
+      SET NEW.OrderDate = NOW();
 END $$
 DELIMITER ;
