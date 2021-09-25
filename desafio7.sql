@@ -8,6 +8,6 @@ FROM
     hr.job_history AS H ON H.EMPLOYEE_ID = E.EMPLOYEE_ID
 WHERE
     MONTH(H.START_DATE) = 1
-		OR MONTH(H.START_DATE) = 2
+	OR MONTH(H.START_DATE) = 2
         OR MONTH(H.START_DATE) = 3
 ORDER BY `Nome completo`, `Data de início`;
