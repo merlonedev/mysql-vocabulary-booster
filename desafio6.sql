@@ -6,7 +6,7 @@ SELECT
 FROM
     hr.job_history AS jobHistory
         JOIN
-	hr.departments AS departments ON jobHistory.DEPARTMENT_ID = departments.DEPARTMENT_ID
+	  hr.departments AS departments ON jobHistory.DEPARTMENT_ID = departments.DEPARTMENT_ID
         JOIN
     hr.employees AS employees ON jobHistory.EMPLOYEE_ID = employees.EMPLOYEE_ID
         JOIN
