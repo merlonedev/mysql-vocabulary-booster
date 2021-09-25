@@ -6,4 +6,3 @@ SELECT
 FROM
     jobs
     ORDER BY `Variação Salarial`,`Cargo`;
-    
