@@ -13,4 +13,3 @@ FROM
   jobs
 ORDER BY
   Cargo;
-
