@@ -13,14 +13,14 @@ SELECT
             ' ',
             employees.LAST_NAME) AS 'Nome completo',
     jobs.JOB_TITLE AS 'Cargo',
-    jobs_history.START_DATE AS 'Data de início do cargo',
+    job_history.START_DATE AS 'Data de início do cargo',
     departments.DEPARTMENT_NAME AS 'Departamento'
 FROM
-    hr.job_history AS jobs_history
+    hr.job_history AS job_history
         INNER JOIN
-    hr.employees AS employees ON jobs_history.EMPLOYEE_ID = employees.EMPLOYEE_ID
+    hr.employees AS employees ON job_history.EMPLOYEE_ID = employees.EMPLOYEE_ID
         INNER JOIN
-    hr.jobs AS jobs ON jobs_history.JOB_ID = jobs.JOB_ID
+    hr.jobs AS jobs ON jobs.JOB_ID = job_history.JOB_ID
         INNER JOIN
-    hr.departments AS departments ON jobs_history.DEPARTMENT_ID = departments.DEPARTMENT_ID
-ORDER BY `Nome completo`, `Cargo` DESC;
+    hr.departments AS departments ON job_history.DEPARTMENT_ID = departments.DEPARTMENT_ID
+ORDER BY `Nome completo` DESC, `Cargo` ASC;
