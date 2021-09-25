@@ -1,14 +1,16 @@
 SELECT 
-    job_title AS 'cargo',
-    TRUNCATE(AVG(min_salary), 2) AS 'Média salarial',
+    a.job_title AS Cargo,
+    TRUNCATE(AVG(b.salary), 2) AS 'Média salarial',
     CASE
-        WHEN AVG(min_salary) BETWEEN 2000 AND 5800 THEN 'Junior'
-        WHEN AVG(min_salary) BETWEEN 5801 AND 7500 THEN 'Pleno'
-        WHEN AVG(min_salary) BETWEEN 7501 AND 10500 THEN 'Sênior '
-        WHEN AVG(min_salary) > 10501 THEN 'CEO'
-        ELSE ' '
+        WHEN AVG(b.salary) BETWEEN 2000 AND 5800 THEN 'Júnior'
+        WHEN AVG(b.salary) BETWEEN 5801 AND 7500 THEN 'Pleno'
+        WHEN AVG(b.salary) BETWEEN 7501 AND 10500 THEN 'Sênior'
+        WHEN AVG(b.salary) > 10501 THEN 'CEO'
+        ELSE ''
     END AS 'Senioridade'
 FROM
-    jobs
-GROUP BY job_title
-ORDER BY TRUNCATE(AVG(min_salary), 2), job_title;
+    jobs AS a
+        INNER JOIN
+    employees AS b ON a.job_id = b.job_id
+GROUP BY `Cargo`
+ORDER BY `Média salarial`, `Cargo`;
