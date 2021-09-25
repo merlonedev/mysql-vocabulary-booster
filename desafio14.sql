@@ -1,11 +1,11 @@
 SELECT
-Country
+Country AS País
 FROM
 customers
 UNION
 SELECT
-Country
+Country AS País
 FROM
 suppliers
-ORDER BY Country
+ORDER BY País
 LIMIT 5;

@@ -1,5 +1,5 @@
 SELECT 
-    p.ProductName, p.Price
+    p.ProductName AS Produto, p.Price AS Preço
 FROM
     products AS p
         JOIN
