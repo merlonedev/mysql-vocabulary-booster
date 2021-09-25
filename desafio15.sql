@@ -12,3 +12,4 @@ WHERE J.JOB_TITLE = CARGO;
   DELIMITER ;
   
   CALL buscar_media_por_cargo('Programmer');
+  
