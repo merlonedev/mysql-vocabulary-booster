@@ -6,13 +6,16 @@
 --   *A quarta deve possuir o alias "Departamento" e mostrar o nome do departamento em que a pessoa exerceu seu cargo.
 -- Os resultados devem estar ordenados pelo nome completo das pessoas empregadas em ordem decrescente.Em caso de empate no nome completo,
 -- ordene os resultados pelo nome do cargo em ordem alfabética.
-SELECT 
-(SELECT CONCAT(FIRST_NAME, ' ', LAST_NAME) from hr.employees
-WHERE hr.employees.EMPLOYEE_ID = hr.job_history.EMPLOYEE_ID) AS `Nome completo`, 
-(select JOB_TITLE from hr.jobs WHERE hr.jobs.JOB_ID = hr.job_history.JOB_ID) AS `Cargo`, 
-jh.START_DATE AS `Data de início do cargo`,
-d.DEPARTMENT_NAME AS `Departamento`
-FROM hr.employees AS e
-INNER JOIN hr.job_history AS jh ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID
-INNER JOIN hr.departments AS d ON d.DEPARTMENT_ID = jh.DEPARTMENT_ID
-ORDER BY `Nome completo` DESC, `Cargo` ASC;
+SELECT
+(SELECT CONCAT(FIRST_NAME, ' ', LAST_NAME)
+FROM hr.employees
+WHERE hr.job_history.EMPLOYEE_ID = hr.employees.EMPLOYEE_ID) AS 'Nome completo',
+(SELECT JOB_TITLE FROM hr.jobs
+WHERE hr.job_history.JOB_ID = hr.jobs.JOB_ID) AS 'Cargo',
+START_DATE AS 'Data de início do cargo',
+(SELECT DEPARTMENT_NAME
+FROM hr.departments
+WHERE hr.job_history.DEPARTMENT_ID = hr.departments.DEPARTMENT_ID) AS 'Departamento'
+FROM hr.job_history
+WHERE EMPLOYEE_ID <> 0
+ORDER BY 1 DESC , 2;
