@@ -1,4 +1,4 @@
-const { readFileSync } = require('fs');
+/*const { readFileSync } = require('fs');
 const { Sequelize } = require('sequelize');
 const Importer = require('mysql-import');
 
@@ -83,7 +83,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('14 - Considerando o conjunto formado pelas pessoas consumidoras e empresas fornecedoras de produtos, queremos saber quais são os cinco primeiros países distintos, em ordem alfabética, presentes nesse conjunto', () => {
-    it.only('Verifica o desafio 14', async () => {
+    it('Verifica o desafio 14', async () => {
       const challengeQuery = readFileSync('desafio14.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult14');
 
@@ -109,4 +109,4 @@ describe('Desafios iniciais', () => {
       expect(result[2]).toEqual(expectedResult[2]);
     });
   });
-});
+});*/

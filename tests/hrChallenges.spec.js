@@ -1,4 +1,4 @@
-/*const { readFileSync } = require('fs');
+const { readFileSync } = require('fs');
 const { Sequelize } = require('sequelize');
 const Importer = require('mysql-import');
 
@@ -90,7 +90,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('7 - Faça um relatório que mostra o **histórico de cargos das pessoas empregadas** que iniciaram seus cargos nos meses de janeiro, fevereiro ou março', () => {
-    it.only('Verifica o desafio 7', async () => {
+    it('Verifica o desafio 7', async () => {
       const challengeQuery = readFileSync('desafio7.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult7');
 
@@ -108,7 +108,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('15 - Crie uma procedure chamada `buscar_media_por_cargo` que recebe como parâmetro o nome de um cargo e em retorno deve mostrar a média salarial de todas as pessoas que possuem esse cargo', () => {
-    it('Verifica o desafio 15', async () => {
+    it.only('Verifica o desafio 15', async () => {
       const challengeQuery = readFileSync('desafio15.sql', 'utf8').trim();
       const createProcedureQuery = /CREATE PROCEDURE.*END/si.exec(challengeQuery)[0];
 
@@ -179,4 +179,4 @@ describe('Desafios iniciais', () => {
       expect(result).toEqual(expectedResult);
     });
   });
-});*/
+});
