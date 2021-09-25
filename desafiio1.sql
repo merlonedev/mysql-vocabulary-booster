@@ -1,6 +1,5 @@
 SELECT 
-    COUNTRY_NAME
-AS 'País',
+    COUNTRY_NAME AS 'País',
 IF(
     REGION_ID = 1,
 'incluído',
@@ -10,4 +9,4 @@ AS
 FROM
     hr.countries
 ORDER BY
-    País;
+    COUNTRY_NAME;
