@@ -1,6 +1,6 @@
 SELECT 
-    customers1.ContactName AS 'Nome',
-    customers1.Country AS 'País',
+    customers1.ContactName AS Nome,
+    customers1.Country AS País,
     (SELECT 
             COUNT(*) - 1
         FROM
