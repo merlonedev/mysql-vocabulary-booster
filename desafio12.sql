@@ -12,5 +12,3 @@ WHERE
     t1.JOB_ID = t2.JOB_ID
         AND CONCAT(t1.FIRST_NAME, t1.LAST_NAME) <> CONCAT(t2.FIRST_NAME, t2.LAST_NAME)
 ORDER BY `Nome completo funcionário 1` , `Nome completo funcionário 2`;
-
-    
