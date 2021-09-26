@@ -9,4 +9,3 @@ FROM
 WHERE
     MONTH(t2.START_DATE) IN (01 , 02, 03)
 ORDER BY `Nome completo` ASC , `Data de início` ASC;
-    
