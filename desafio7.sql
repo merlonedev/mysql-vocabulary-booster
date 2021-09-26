@@ -1,0 +1,4 @@
+SELECT CONCAT(UCASE(FIRST_NAME), ' ', UCASE(LAST_NAME)) AS `Nome completo`,
+	HIRE_DATE AS `Data de início`,
+    SALARY AS `Salário`
+FROM hr.employees ORDER BY CONCAT(UCASE(FIRST_NAME), ' ', UCASE(LAST_NAME)), HIRE_DATE ASC;
