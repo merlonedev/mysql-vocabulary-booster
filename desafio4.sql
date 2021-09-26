@@ -12,3 +12,4 @@ FROM
         INNER JOIN
     hr.employees AS e ON j.JOB_ID = e.JOB_ID
 GROUP BY JOB_TITLE
+ORDER BY `Média salarial` ASC
