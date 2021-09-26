@@ -3,7 +3,9 @@ SELECT
     s.ShipperName AS `Empresa que fez o envio`,
     o.OrderDate AS `Data do pedido`
 FROM
-   orders AS `o`
+    orders
+AS
+`o`
 INNER JOIN
     customers AS  `c`
 ON
