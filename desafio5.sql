@@ -7,4 +7,3 @@ FROM
     hr.jobs AS j ON j.job_id = e.job_id
 GROUP BY e.job_id
 ORDER BY `Variação Salarial` , Cargo;
-

@@ -9,4 +9,3 @@ SELECT
 FROM
     hr.jobs
     order by JOB_TITLE;
-
