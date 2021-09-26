@@ -16,7 +16,7 @@ SELECT
                 AND MAX_SALARY <= 30000
         THEN
             'Alto'
-        WHEN MAX_SALARY >= 30001 THEN 'Alto'
+        WHEN MAX_SALARY >= 30001 THEN 'Altíssimo'
     END AS Nível
 FROM
     hr.jobs
