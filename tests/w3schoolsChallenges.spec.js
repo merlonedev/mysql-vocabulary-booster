@@ -1,4 +1,4 @@
-/*const { readFileSync } = require('fs');
+const { readFileSync } = require('fs');
 const { Sequelize } = require('sequelize');
 const Importer = require('mysql-import');
 
@@ -92,7 +92,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('17 - Crie uma TRIGGER que, a cada nova inserção realizada na tabela `orders`, insira automaticamente a data atual na coluna `OrderDate`', () => {
-    it('Verifica o desafio 17', async () => {
+    it.only('Verifica o desafio 17', async () => {
       const challengeQuery = readFileSync("desafio17.sql", "utf8").trim();
       const expectedResult = require("./challengesResults/challengeResult17");
       
@@ -109,4 +109,4 @@ describe('Desafios iniciais', () => {
       expect(result[2]).toEqual(expectedResult[2]);
     });
   });
-});*/
+});

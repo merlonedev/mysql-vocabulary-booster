@@ -99,7 +99,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('12 - Faça um relatório que lista todas as pessoas funcionárias **que possuem o mesmo cargo**', () => {
-    it('Verifica o desafio 12', async () => {
+    it.only('Verifica o desafio 12', async () => {
       const challengeQuery = readFileSync('desafio12.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult12');
 
@@ -122,7 +122,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('16 - Crie uma função chamada `buscar_quantidade_de_empregos_por_funcionario` no banco de dados `hr` que, ao receber o **email de uma pessoa funcionária**, retorne a quantidade de empregos **presentes em seu histórico**', () => {
-    it.only('Verifica o desafio 16', async () => {
+    it('Verifica o desafio 16', async () => {
       const challengeQuery = readFileSync('desafio16.sql', 'utf8').trim();
       const createFunctionQuery = /CREATE FUNCTION.*END/si.exec(challengeQuery)[0];
 
