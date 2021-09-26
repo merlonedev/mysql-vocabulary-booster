@@ -1,7 +1,3 @@
---  `Nome de contato`,
--- `Empresa que fez o envio`
--- `Data do pedido`
-
 SELECT 
     a.contactName AS `Nome de contato`,
     c.shippername AS `Empresa que fez o envio`,
