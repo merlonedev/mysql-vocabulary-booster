@@ -7,4 +7,3 @@ FROM
 	hr.jobs
 GROUP BY JOB_ID, `Variação salarial`
 ORDER BY `Variação salarial`
-    
