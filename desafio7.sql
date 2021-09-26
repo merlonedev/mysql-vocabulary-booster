@@ -1,4 +1,4 @@
-SELECT UCASE(CONCAT(T2.first_name,' ',T2.last_name)) AS 'nome completo',
+SELECT UCASE(CONCAT(T2.first_name,' ',T2.last_name)) AS 'Nome completo',
 T1.START_DATE AS 'Data de início',
 T2.SALARY AS 'Salário'
 FROM hr.job_history AS T1
