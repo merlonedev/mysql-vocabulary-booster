@@ -1,5 +1,3 @@
-SELECT 'Nome completo', 'Departamento', 'Cargo';
-
 USE hr;
 DELIMITER $$
 
@@ -18,7 +16,4 @@ BEGIN
 END $$
 
 DELIMITER ;
-
-
-
  
