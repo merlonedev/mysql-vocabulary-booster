@@ -1,6 +1,6 @@
 SELECT 
     ProductName AS 'Produto',
-  	Price As 'Preço'
+    Price As 'Preço'
 FROM
     products AS `p`
         JOIN
