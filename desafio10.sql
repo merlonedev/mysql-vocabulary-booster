@@ -8,4 +8,5 @@ FROM
         INNER JOIN
     w3schools.products AS P ON OD.ProductID = P.ProductID
 GROUP BY P.ProductName
+HAVING `Média` > 20.00
 ORDER BY `Média`, Produto;
