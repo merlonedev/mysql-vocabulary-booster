@@ -17,4 +17,4 @@ FROM
     hr.employees AS e
         INNER JOIN
     hr.job_history AS jh ON e.JOB_ID = jh.JOB_ID
-ORDER BY `Nome completo` DESC, Cargo ASC;
+ORDER BY `Nome completo` DESC, Cargo;
