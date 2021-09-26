@@ -1,7 +1,7 @@
-SELECT DISTINCT
+SELECT 
     ct1.ContactName AS `Nome`,
     ct1.Country AS País,
-    COUNT(ct1.ContactName) - 1 AS `Número de compatriotas`
+    COUNT(ct1.ContactName)  AS `Número de compatriotas`
 FROM
     customers AS ct1,
     customers AS ct2
