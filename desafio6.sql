@@ -1,5 +1,5 @@
 SELECT 
-    CONCAT(a.first_name, ' ', a.last_name) AS `Nome Completo`,
+    CONCAT(a.first_name, ' ', a.last_name) AS `Nome completo`,
     b.job_title AS `Cargo`,
     a.hire_date AS `Data de início do cargo`,
     c.department_name AS Departamento
