@@ -7,4 +7,5 @@ SELECT
         WHEN MAX_SALARY > 30000 then 'Altíssimo'
 	END AS Nível
 FROM
-    jobs;
+    jobs
+ORDER BY Cargo;
