@@ -4,4 +4,5 @@ SELECT
 FROM w3schools.products AS pro
 INNER JOIN w3schools.order_details AS ord
 ON pro.ProductID = ord.ProductID
+WHERE Quantity > 80
 ORDER BY `Produto`;
