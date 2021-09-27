@@ -1,6 +1,6 @@
 SELECT 
     C1.ContactName AS 'Nome',
-    C1.Country AS 'País',
+    ANY_VALUE(C1.Country) AS 'País',
     COUNT(*) AS 'Número de compatriotas'
 FROM
     w3schools.customers AS C1,
