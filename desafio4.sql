@@ -6,7 +6,7 @@ SELECT
         WHEN ROUND(AVG(EMP.SALARY), 2) BETWEEN 5801 AND 7500 THEN 'Pleno'
         WHEN ROUND(AVG(EMP.SALARY), 2) BETWEEN 7501 AND 10500 THEN 'Sênior'
         WHEN ROUND(AVG(EMP.SALARY), 2) > 10500 THEN 'CEO'
-    END AS 'Sênioridade'
+    END AS 'Senioridade'
 FROM
     hr.employees AS EMP
         JOIN
