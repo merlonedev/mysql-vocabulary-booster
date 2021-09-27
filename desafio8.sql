@@ -8,4 +8,4 @@ JOIN
 w3schools.orders AS ORD ON CUST.CustomerID = ORD.CustomerID
 JOIN
 w3schools.shippers AS SHIP ON ORD.ShipperID = SHIP.ShipperID
-ORDER BY CUST.CustomerName , SHIP.ShipperName , ORD.OrderDate;
+ORDER BY CUST.ContactName ASC , SHIP.ShipperName , ORD.OrderDate;
