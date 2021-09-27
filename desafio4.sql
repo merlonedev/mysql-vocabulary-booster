@@ -7,7 +7,8 @@ WHEN ROUND(AVG(e.SALARY), 2) BETWEEN 5801 AND 7500 THEN 'Pleno'
 WHEN ROUND(AVG(e.SALARY), 2) BETWEEN 7501 AND 10500 THEN 'Sênior' 
 ELSE 'CEO'
 END AS 'Senioridade'
-FROM hr.employees AS e
-INNER JOIN hr.jobs AS job ON job.JOB_ID = e.JOB_ID
-GROUP BY JOB_TITLE
-ORDER BY 'Média salarial', 'Cargo';
+FROM 
+hr.employees AS e
+JOIN hr.jobs AS job ON e.JOB_ID = job.JOB_ID
+GROUP BY e.JOB_ID
+ORDER BY ROUND(AVG(e.SALARY), 2), 'Cargo';
