@@ -6,7 +6,8 @@ FROM
     w3schools.customers AS c
         INNER JOIN
     w3schools.orders AS o ON c.CustomerID = o.CustomerID
-    INNER JOIN 
+        INNER JOIN
     w3schools.shippers AS s ON s.ShipperID = o.ShipperID
-WHERE s.ShipperID = 1 OR s.ShipperID = 2
-ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`
+WHERE
+    s.ShipperID = 1 OR s.ShipperID = 2
+ORDER BY `Nome de contato` , `Empresa que fez o envio` , `Data do pedido`
