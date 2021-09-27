@@ -10,5 +10,5 @@ FROM
     employees AS e2
 WHERE
     e1.JOB_ID = e2.JOB_ID
-        AND e1.FIRST_NAME <> e2.FIRST_NAME
+        AND e1.EMPLOYEE_ID <> e2.EMPLOYEE_ID
 ORDER BY `Nome completo funcionário 1` , `Nome completo funcionário 2`;
