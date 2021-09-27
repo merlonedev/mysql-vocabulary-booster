@@ -1,5 +1,5 @@
 SELECT
-t2.CustomerName AS `Nome de contato`,
+t2.ContactName AS `Nome de contato`,
 IF(t1.ShipperID = 1, 'Speedy Express', 'United Package') AS `Empresa que fez o envio`,
 t1.OrderDate AS `Data do pedido`
 FROM
