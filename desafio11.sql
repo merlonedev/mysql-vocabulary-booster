@@ -1,12 +1,12 @@
 SELECT 
-    t1.ContactName AS 'Nome',
-    t1.Country AS 'País',
-    COUNT(t2.Country) AS 'Número de compatriotas'
+    c1.ContactName AS 'Nome',
+    c1.Country AS 'País',
+    COUNT(c2.Country) AS 'Número de compatriotas'
 FROM
-    customers AS t1,
-    customers AS t2
+    customers AS c1,
+    customers AS c2
 WHERE
-    t1.Country = t2.Country
-        AND t.CustomerID <> t2.CustomerID
-GROUP BY Nome
+    c1.Country = c2.Country
+        AND c1.CustomerID <> c2.CustomerID
+GROUP BY Nome , País
 ORDER BY Nome;
