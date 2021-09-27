@@ -3,7 +3,7 @@ SELECT
     JOBH.START_DATE AS 'Data de início',
     EMP.SALARY AS 'Salário'
 FROM
-hr.employees  AS EMP
+hr.employees AS EMP
 JOIN
 hr.job_history AS JOBH ON EMP.EMPLOYEE_ID = JOBH.EMPLOYEE_ID
 WHERE
