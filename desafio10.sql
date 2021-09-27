@@ -8,4 +8,5 @@ FROM
         JOIN
     w3schools.order_details AS D ON D.ProductID = P.ProductID
 GROUP BY D.ProductID
+HAVING `Média` > 20
 ORDER BY `Média` ASC , `Produto` ASC;
