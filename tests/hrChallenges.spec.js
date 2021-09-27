@@ -99,7 +99,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('12 - Faça um relatório que lista todas as pessoas funcionárias **que possuem o mesmo cargo**', () => {
-    it.only('Verifica o desafio 12', async () => {
+    it('Verifica o desafio 12', async () => {
       const challengeQuery = readFileSync('desafio12.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult12');
 
@@ -140,7 +140,7 @@ describe('Desafios iniciais', () => {
   });
 
   describe('18 - Faça um relatório que mostra o **histórico de cargos das pessoas empregadas**, mostrando as datas de início e de saída, assim como os anos que ela ficou nesse cargo', () => {
-    it('Verifica o desafio 18', async () => {
+    it.only('Verifica o desafio 18', async () => {
       const challengeQuery = readFileSync('desafio18.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult18');
 
