@@ -4,5 +4,5 @@ COUNT(T2.Country) - 1 AS 'Número de compatriotas'
 FROM customers AS T1, customers AS T2
 WHERE T1.Country = T2.Country
 GROUP BY T1.ContactName, T2.Country
-HAVING COUNT(T2.Country) > 0
+HAVING COUNT(T2.Country) - 1 > 0
 ORDER BY T1.ContactName ASC;
