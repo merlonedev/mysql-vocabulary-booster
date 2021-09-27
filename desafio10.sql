@@ -6,7 +6,7 @@ p.ProductName AS 'Produto',
 FROM
 w3schools.products AS p
 	INNER JOIN
-    w3schools.order_details AS o ON o.ProductID = p.ProductID
+  w3schools.order_details AS o ON o.ProductID = p.ProductID
 GROUP BY p.ProductName
 HAVING ROUND(AVG(o.Quantity), 2) > 20
 ORDER BY ROUND(AVG(o.Quantity), 2), p.ProductName;
