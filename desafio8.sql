@@ -4,9 +4,9 @@ SELECT
     o.OrderDate AS `Data do pedido`
 FROM
     customers AS c
-		INNER JOIN
-	orders AS o ON c.CustomerID = o.CustomerID
-		INNER JOIN
-	shippers AS s ON o.ShipperID = s.ShipperID
+		    INNER JOIN
+	  orders AS o ON c.CustomerID = o.CustomerID
+		    INNER JOIN
+	  shippers AS s ON o.ShipperID = s.ShipperID
 WHERE s.ShipperID IN (1, 2)
 ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`;
