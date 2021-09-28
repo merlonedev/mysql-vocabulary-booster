@@ -6,9 +6,11 @@ SELECT
     emB.SALARY AS 'Salário funcionário 2',
     emB.PHONE_NUMBER AS 'Telefone funcionário 2'
 FROM
-    hr.employees AS emA,
-    hr.employees AS emB
-WHERE
+	hr.employees emA
+RIGHT JOIN
+	hr.employees emB
+ON 
     emA.JOB_ID = emB.JOB_ID
-        AND CONCAT(emA.FIRST_NAME, ' ', emB.LAST_NAME) <> CONCAT(emB.FIRST_NAME, ' ', emB.LAST_NAME)
+WHERE
+    emA.EMPLOYEE_ID <> emB.EMPLOYEE_ID
 ORDER BY `Nome completo funcionário 1`, `Nome completo funcionário 2`;
