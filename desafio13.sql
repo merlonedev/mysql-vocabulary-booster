@@ -7,6 +7,6 @@ FROM
 WHERE
   od.Quantity > 80
 GROUP BY
-  od.Quantity, pr.productName
+  od.Quantity, pr.Price
 ORDER BY
   pr.productName;
