@@ -7,4 +7,3 @@ FROM
 WHERE
     o.Quantity > 80
 ORDER BY Produto;
-   

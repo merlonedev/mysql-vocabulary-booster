@@ -11,4 +11,3 @@ FROM
     w3schools.customers
 HAVING `Número de compatriotas` > 0
 ORDER BY Nome;
-   
