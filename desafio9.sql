@@ -1,6 +1,6 @@
 SELECT
-	CONCAT(EMP.FirstName, ' ', EMP.LastName) as 'Nome completo',
-    COUNT(*) as 'Total de pedidos'
+CONCAT(EMP.FirstName, ' ', EMP.LastName) as 'Nome completo',
+COUNT(*) as 'Total de pedidos'
 FROM
 w3schools.employees EMP
 JOIN
