@@ -10,5 +10,5 @@ FROM
         INNER JOIN
     hr.jobs AS j ON j.JOB_ID = jh.JOB_ID
         INNER JOIN
-    hr.departments AS d ON e.DEPARTMENT_ID = d.DEPARTMENT_ID
+    hr.departments AS d ON jh.DEPARTMENT_ID = d.DEPARTMENT_ID
 ORDER BY CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) DESC , j.JOB_TITLE;
