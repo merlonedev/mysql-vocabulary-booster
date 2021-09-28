@@ -1,4 +1,3 @@
-use hr;
 SELECT 
     concat(e.FIRST_NAME, ' ', e.LAST_NAME) AS `Nome completo funcionário 1`,
     e.SALARY AS `Salário funcionário 1`,
@@ -7,8 +6,8 @@ SELECT
     em.SALARY AS `Salário funcionário 2`,
     em.PHONE_NUMBER AS `Telefone funcionário 2`
 FROM
-    employees as e,
-    employees as em
+    hr.employees as e,
+    hr.employees as em
 where
     e.JOB_ID = em.JOB_ID
 and 

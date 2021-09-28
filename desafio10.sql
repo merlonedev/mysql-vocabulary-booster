@@ -1,4 +1,3 @@
-use w3schools;
 SELECT 
     p.ProductName AS 'Produto',
     min(od.Quantity) as 'Mínima',
@@ -7,9 +6,9 @@ SELECT
 FROM
 order_details AS od 
     INNER JOIN
-    orders AS o ON o.OrderID = od.OrderID
+    w3schools.orders AS o ON o.OrderID = od.OrderID
     INNER JOIN
-    products AS p ON p.ProductID = od.ProductID
+    w3schools.products AS p ON p.ProductID = od.ProductID
     group by `Produto`
     having avg(od.Quantity) > 20
 --    order by `Média`
