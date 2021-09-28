@@ -1,14 +1,16 @@
 use hr;
 SELECT 
-    concat(e.firstName, ' ', e.lastName) AS 'Nome completo funcionário 1',
-    Country AS `País`,
-    (SELECT 
-            COUNT(Country) - 1
-        FROM
-            employees as e
-        WHERE
-            Country = `País`) AS `Número de compatriotas`
+    concat(e.FIRST_NAME, ' ', e.LAST_NAME) AS `Nome completo funcionário 1`,
+    e.SALARY AS `Salário funcionário 1`,
+    e.PHONE_NUMBER AS `Telefone funcionário 1`,
+    concat(em.FIRST_NAME, ' ', em.LAST_NAME) AS `Nome completo funcionário 2`,
+    em.SALARY AS `Salário funcionário 2`,
+    em.PHONE_NUMBER AS `Telefone funcionário 2`
 FROM
-    employees
-HAVING `Número de compatriotas` > 0
-ORDER BY ContactName;
+    employees as e,
+    employees as em
+where
+    e.JOB_ID = em.JOB_ID
+and 
+    concat(e.FIRST_NAME, ' ', e.LAST_NAME) <> concat(em.FIRST_NAME, ' ', em.LAST_NAME)
+ORDER BY `Nome completo funcionário 1`, `Nome completo funcionário 2`;
