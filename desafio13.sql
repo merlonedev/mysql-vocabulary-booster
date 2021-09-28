@@ -6,6 +6,7 @@ FROM
   INNER JOIN products AS pr ON od.ProductId = pr.ProductID
 WHERE
   od.Quantity > 80
-  GROUP BY od.Quantity
+GROUP BY
+  od.Quantity, pr.productName
 ORDER BY
   pr.productName;
