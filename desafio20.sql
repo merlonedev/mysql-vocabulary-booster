@@ -1,9 +1,8 @@
 USE hr;
 DELIMITER $$
-
 CREATE PROCEDURE exibir_historico_completo_por_funcionario(IN email VARCHAR(100))
 BEGIN
-SELECT 
+SELECT
     CONCAT(e.first_name, ' ', e.last_name) AS 'Nome completo',
     d.department_name AS 'Departamento',
     j.job_title AS 'Cargo'
@@ -19,7 +18,4 @@ WHERE
     e.email LIKE 'NKOCHHAR'
 ORDER BY `Departamento` , `Cargo`;
 END $$
-
 DELIMITER ;
-
- 
