@@ -1,7 +1,7 @@
 SELECT 
-    wcust.ContactName AS `Nome de contato`,
-    wshipp.ShipperName AS `Empresa que fez o envio`,
-    word.OrderDate AS `Data do pedodo`
+    wcust.ContactName AS 'Nome de contato',
+    wshipp.ShipperName AS 'Empresa que fez o envio',
+    word.OrderDate AS 'Data do pedido'
 FROM
     w3schools.customers AS wcust
         INNER JOIN

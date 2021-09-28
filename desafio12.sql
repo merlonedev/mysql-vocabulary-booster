@@ -11,4 +11,4 @@ FROM
 WHERE
     emA.JOB_ID = emB.JOB_ID
         AND CONCAT(emA.FIRST_NAME, ' ', emB.LAST_NAME) <> CONCAT(emB.FIRST_NAME, ' ', emB.LAST_NAME)
-ORDER BY CONCAT(emA.FIRST_NAME, ' ', emA.LAST_NAME) , CONCAT(emB.FIRST_NAME, ' ', emB.LAST_NAME);
+ORDER BY `Nome completo funcionário 1`, `Nome completo funcionário 2`;
