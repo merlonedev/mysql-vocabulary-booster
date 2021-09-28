@@ -8,4 +8,4 @@ SELECT
 FROM
     hr.countries AS c
 ORDER BY
-    'País';
+    c.COUNTRY_NAME;
