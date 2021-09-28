@@ -6,4 +6,5 @@ FROM
 JOIN
     products AS p ON p.ProductID = od.ProductID
 where od.Quantity > 80
-ORDER BY `Produto`;
+-- ORDER BY `Produto`;
+ORDER BY p.ProductName;
