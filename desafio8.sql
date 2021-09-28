@@ -10,4 +10,5 @@ FROM
     w3schools.shippers AS wshipp ON wshipp.ShipperID = word.ShipperID
 WHERE
     wshipp.ShipperName = 'Speedy Express'
-        OR wshipp.ShipperName = 'United Package';
+        OR wshipp.ShipperName = 'United Package'
+ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`;
