@@ -1,6 +1,6 @@
 use w3schools;
 SELECT 
-    p.ProductName AS `Produto`,
+    p.ProductName AS 'Produto',
     min(od.Quantity) as 'Mínima',
     max(od.Quantity) as 'Máxima',
     round(avg(od.Quantity),2) as 'Média'

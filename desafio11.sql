@@ -1,7 +1,7 @@
 use w3schools;
 SELECT 
     ContactName AS 'Nome',
-    Country AS `País`,
+    Country AS 'País',
     (SELECT 
             COUNT(Country) - 1
         FROM
