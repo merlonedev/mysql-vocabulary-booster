@@ -8,4 +8,3 @@ FROM
     orders AS o ON o.EmployeeID = e.EmployeeID
     group by o.EmployeeID
     order by `Total de pedidos`;
-
