@@ -1,6 +1,6 @@
 SELECT 
-    CONCAT(FirstName, + ' ', + LastName) AS 'Nome Completo',
-    COUNT(FirstName) AS 'Total de pedidos'
+    CONCAT(e.FirstName, ' ', e.LastName) AS 'Nome Completo',
+    COUNT(o.OrderID) AS 'Total de pedidos'
 FROM
     w3schools.orders AS o
         INNER JOIN
