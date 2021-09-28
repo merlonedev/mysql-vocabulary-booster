@@ -9,5 +9,3 @@ SELECT
 FROM
     hr.jobs
 ORDER BY Cargo ASC;
-
-
