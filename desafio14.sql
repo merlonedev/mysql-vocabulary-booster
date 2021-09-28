@@ -7,4 +7,3 @@ FROM
     where c.Country = s.Country
     order by c.Country
     limit 5;
-    
