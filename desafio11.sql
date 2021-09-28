@@ -10,4 +10,5 @@ FROM
     FROM
         w3schools.customers
     GROUP BY Country) t2 ON t1.Country = t2.Country
+    WHERE t2.cnt <> 1
 ORDER BY Nome;
