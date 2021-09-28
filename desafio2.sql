@@ -1,9 +1,11 @@
-select JOB_TITLE as 'Cargo',
-	case
-		when MAX_SALARY between 5000 and 10000 then 'Baixo'
-        when MAX_SALARY between 10001 and 20000 then 'Médio'
-        when MAX_SALARY between 20001 and 30000 then 'Alto'
-        when MAX_SALARY > 30000 then 'Altíssimo'
-	end as 'Nível'
-from hr.jobs
-order by JOB_TITLE asc;
+SELECT 
+    JOB_TITLE AS 'Cargo',
+    CASE
+        WHEN MAX_SALARY BETWEEN 5000 AND 10000 THEN 'Baixo'
+        WHEN MAX_SALARY BETWEEN 10001 AND 20000 THEN 'Médio'
+        WHEN MAX_SALARY BETWEEN 20001 AND 30000 THEN 'Alto'
+        WHEN MAX_SALARY > 30000 THEN 'Altíssimo'
+    END AS 'Nível'
+FROM
+    hr.jobs
+ORDER BY JOB_TITLE ASC;
