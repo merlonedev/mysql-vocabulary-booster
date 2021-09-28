@@ -9,4 +9,4 @@ WHERE
   t1.Country = t2.Country
   AND t1.ContactName <> t2.ContactName
 GROUP BY
-  t1.ContactName;
+  t1.ContactName, t1.Country;
