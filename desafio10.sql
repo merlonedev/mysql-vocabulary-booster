@@ -1,6 +1,6 @@
 use w3schools;
 SELECT 
-    p.ProductName AS 'Produto',
+    p.ProductName AS `Produto`,
     min(od.Quantity) as 'Mínima',
     max(od.Quantity) as 'Máxima',
     round(avg(od.Quantity),2) as 'Média'
@@ -12,4 +12,4 @@ order_details AS od
     products AS p ON p.ProductID = od.ProductID
     group by `Produto`
     having avg(od.Quantity) > 20
-    order by `Média`, 'Produto';
+    order by `Média`, `Produto`;
