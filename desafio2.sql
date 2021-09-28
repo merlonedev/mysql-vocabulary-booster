@@ -12,4 +12,4 @@ SELECT
 FROM
     hr.jobs
 ORDER BY
-    'Cargo';
+    JOB_TITLE;
