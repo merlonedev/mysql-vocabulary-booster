@@ -10,7 +10,7 @@ FROM
   employees AS t2
 WHERE
   t1.job_id = t2.job_id
-  AND CONCAT(t1.First_Name, ' ', t1.Last_Name) <> CONCAT(t2.First_Name, ' ', t2.Last_Name)
+  AND NOT (t1.first_name = t2.First_name AND t1.last_name = t2.last_name)
 ORDER BY
   1,
   4;
