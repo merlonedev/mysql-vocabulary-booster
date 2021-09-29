@@ -7,8 +7,8 @@ ELSE 'CEO'
 END AS `Senioridade`
 FROM jobs AS j
 INNER JOIN (
-	SELECT JOB_ID, (
-		SELECT ROUND(AVG(SALARY), 2) FROM employees
+SELECT JOB_ID, (
+	SELECT ROUND(AVG(SALARY), 2) FROM employees
 WHERE JOB_ID = jobs.JOB_ID) AS `Média salarial` FROM jobs) AS m 
 ON j.JOB_ID = m.JOB_ID
 ORDER BY m.`Média salarial`, Cargo;
