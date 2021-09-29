@@ -2,7 +2,7 @@ USE w3schools;
 
 DELIMITER $$
 
-CREATE TRIGGER OrderDate
+CREATE TRIGGER insert_date_into_column
 BEFORE INSERT ON orders
 FOR EACH ROW
 BEGIN
