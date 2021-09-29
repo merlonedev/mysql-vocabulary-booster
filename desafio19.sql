@@ -9,7 +9,7 @@ BEGIN
     DECLARE total_de_funcionarios INT;
     
     SELECT
-	    COUNT(*)
+        COUNT(*)
     FROM
         hr.employees
     WHERE
