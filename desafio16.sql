@@ -9,7 +9,7 @@ COUNT(emp.EMPLOYEE_ID) AS `total_empregos`
 FROM
 hr.employees AS emp
 INNER JOIN
-	hr.job_history AS hist ON hist.EMPLOYEE_ID = emp.EMPLOYEE_ID
+hr.job_history AS hist ON hist.EMPLOYEE_ID = emp.EMPLOYEE_ID
         WHERE emp.EMAIL = email INTO amount_jobs;
         RETURN amount_jobs;
 END $$
